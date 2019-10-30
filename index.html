@@ -7,19 +7,23 @@
 <header>hej
 </header>
 
-<body onload=startingPosition()>
+<body onload="startingPosition();startingSteps();">
 
     <content id=game>
         <section id=map>
-            <output id=xAxis></output>
             <output id=yAxis></output>
+            <output id=xAxis></output>
         </section>
         <br><br>
+
+        <section id=stepCounter>Steps <output id=numberOfSteps></output></section>
+        <br><br>
+        
         <section id=controls>
-            <button type="button" id=up onclick=moveUp()>Up</button>
-            <button type="button" id=down onclick=moveDown()>Down</button>
-            <button type="button" id=left onclick=moveLeft()>Left</button>
-            <button type="button" id=right onclick=moveRight()>Right</button>
+            <button type="button" id=up onclick="moveUp();countSteps();">Up</button>
+            <button type="button" id=down onclick="moveDown();countSteps();">Down</button>
+            <button type="button" id=left onclick="moveLeft();countSteps();">Left</button>
+            <button type="button" id=right onclick="moveRight();countSteps()">Right</button>
 
         </section>
     </content>

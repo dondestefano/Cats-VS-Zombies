@@ -106,3 +106,12 @@ function moveRight()   {
 }
 
 //Keep track of how many steps the player has made
+function startingSteps()   {
+    document.getElementById("numberOfSteps").innerHTML = "0";
+}
+
+function countSteps()   {
+    var steps = parseInt(document.getElementById("numberOfSteps").innerHTML);
+    steps += 1;
+    document.getElementById("numberOfSteps").innerHTML = steps;
+}
