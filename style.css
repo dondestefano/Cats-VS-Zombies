@@ -6,17 +6,25 @@ body{
 }
 
 #map    {
-    displaY: blocK;
+    displaY: block;
     width: 50px;
     height: 30px;    
     color: white;
 }
 
+
 #stepCounter    {
-    displaY: blocK;
+    displaY: block;
     width: 50px;
     height: 30px;    
     color: white;
+}
+
+#zombie    {
+    displaY: block;
+    width: 50px;
+    height: 30px;    
+    color: red;
 }
 
 #controls {

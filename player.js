@@ -17,8 +17,8 @@ function moveUp()   {
         document.getElementById("yAxis").innerHTML = move;
         document.getElementById("down").style.visibility = 'visible';
     }
-    
-    if (yPosition < 6) {
+
+    else if (yPosition < 6) {
         var move = yPosition += 1;
         document.getElementById("yAxis").innerHTML = move;
     }
@@ -93,7 +93,6 @@ function moveRight()   {
     else if (xPosition < 6) {
         var move = xPosition += 1;
         document.getElementById("xAxis").innerHTML = move;
-        document.getElementById("right").style.visibility = 'visible';
     }
 
     else if (xPosition == 6) {
