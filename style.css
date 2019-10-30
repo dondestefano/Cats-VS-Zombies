@@ -1,0 +1,18 @@
+body{
+        display: flex;
+        width: 100vh;
+        height: 100vh;
+        background-color: black;
+}
+
+#map    {
+    displaY: blocK;
+    width: 50px;
+    height: 30px;    
+    color: white;
+}
+
+#controls {
+            display: flex;
+            margin: 10px;
+}
