@@ -1,8 +1,8 @@
 //Place the zombie on the map
 function startingPositionZombie()   {
 
-    document.getElementById("xAxisZombie").innerHTML = "2";
-    document.getElementById("yAxisZombie").innerHTML = "2";
+    document.getElementById("xAxisZombie").innerHTML = "1";
+    document.getElementById("yAxisZombie").innerHTML = "1";
 
 }
 
@@ -14,7 +14,7 @@ function hunt() {
     var yZombiePos = parseInt(document.getElementById("yAxisZombie").innerHTML);
 
     //Get the players position
-    var xPlayerPos = parseInt(document.getElementById("yAxis").innerHTML);
+    var xPlayerPos = parseInt(document.getElementById("xAxis").innerHTML);
     var yPlayerPos = parseInt(document.getElementById("yAxis").innerHTML);
 
     //See how many steps the player has taken
@@ -28,26 +28,34 @@ function hunt() {
 
     }
 
-    else if (xZombiePos < xPlayerPos + 1)   {
+    //Make the Zombie match the x-axis before trying to match the players y-axis
+    else if (xZombiePos !== xPlayerPos)   {
+
+        if (xZombiePos < xPlayerPos) {
         var moveZombie = xZombiePos += 1;
         document.getElementById("xAxisZombie").innerHTML = moveZombie;
-    }
-    
+        }
 
-    else if (xZombiePos > xPlayerPos + 1)   {
+        else if (xZombiePos > xPlayerPos) {
         var moveZombie = xZombiePos -= 1;
         document.getElementById("xAxisZombie").innerHTML = moveZombie;
+        }
     }
 
-    else if (yZombiePos < yPlayerPos + 1)   {
+    //If the x-axis is matched start matching y-Axis.
+    else if (xZombiePos == xPlayerPos && yZombiePos !== yPlayerPos)   {
+
+        if (yZombiePos < yPlayerPos) {
         var moveZombie = yZombiePos += 1;
         document.getElementById("yAxisZombie").innerHTML = moveZombie;
-    }
+        }
 
-    else if (yZombiePos > yPlayerPos + 1)   {
+        else if (yZombiePos > yPlayerPos) {
         var moveZombie = yZombiePos -= 1;
         document.getElementById("yAxisZombie").innerHTML = moveZombie;
+        }
     }
+    
 
 }
 

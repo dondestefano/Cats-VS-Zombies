@@ -1,8 +1,8 @@
 //Starting position
 function startingPosition() {
 
-    document.getElementById("xAxis").innerHTML = "1";
-    document.getElementById("yAxis").innerHTML = "1";
+    document.getElementById("xAxis").innerHTML = "2";
+    document.getElementById("yAxis").innerHTML = "2";
 
 }
 
