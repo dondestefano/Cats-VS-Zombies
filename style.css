@@ -17,7 +17,7 @@ body{
     displaY: block;
     width: 50px;
     height: 30px;    
-    color: white;
+    color: blue;
 }
 
 #zombie    {
@@ -25,6 +25,13 @@ body{
     width: 50px;
     height: 30px;    
     color: red;
+}
+
+#cat    {
+    displaY: block;
+    width: 50px;
+    height: 30px;    
+    color: green;
 }
 
 #controls {
