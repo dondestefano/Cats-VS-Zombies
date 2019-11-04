@@ -29,8 +29,20 @@ function flee() {
 
         if (catDecision < 50) {
 
-        //Move the cat away from the player without stepping out of the x-axis
-            if (xCatPos > xPlayerPos && xCatPos < 7 && xCatPos > 0) {
+        //Move the cat one step away from the player without stepping out of the x-axis
+            if (xCatPos == 7) {
+
+                var moveCat = xCatPos -= 1;
+                document.getElementById("xAxisCat").innerHTML = moveCat;
+            }
+
+            else if (xCatPos == 0) {
+
+                var moveCat = xCatPos += 1;
+                document.getElementById("xAxisCat").innerHTML = moveCat;
+            }
+
+            else if (xCatPos > xPlayerPos && xCatPos < 7 && xCatPos > 0) {
 
                 var moveCat = xCatPos += 1;
                 document.getElementById("xAxisCat").innerHTML = moveCat;
@@ -43,50 +55,38 @@ function flee() {
                 document.getElementById("xAxisCat").innerHTML = moveCat;
     
                 }
-            
-            else if (xCatPos == 7) {
-
-                var moveCat = yCatPos -= 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
-            }
-
-            else if (xCatPos == 0) {
-
-                var moveCat = yCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
-            }
 
         }
         
         else if (catDecision > 50)  {
 
         //Move the cat away from the player without stepping out of the y-axis
-            if (xCatPos > yPlayerPos && yCatPos < 7 && yCatPos > 0) {
+            if (yCatPos == 7) {
 
-                var moveCat = xCatPos += 1;
+                var moveCat = yCatPos -= 1;
+                document.getElementById("yAxisCat").innerHTML = moveCat;
+            
+                }
+
+            else if (yCatPos == 0) {
+
+                var moveCat = yCatPos += 1;
+                document.getElementById("yAxisCat").innerHTML = moveCat;
+                }
+
+            else if (yCatPos > yPlayerPos && yCatPos < 7 && yCatPos > 0) {
+
+                var moveCat = yCatPos += 1;
                 document.getElementById("yAxisCat").innerHTML = moveCat;
 
                 }
 
-            else if (xCatPos < xPlayerPos && xCatPos < 7 && xCatPos > 0) {
+            else if (yCatPos < yPlayerPos && yCatPos < 7 && yCatPos > 0) {
 
                 var moveCat = yCatPos -= 1;
                 document.getElementById("yAxisCat").innerHTML = moveCat;
     
                 }
-            
-            else if (xCatPos == 7) {
-
-                var moveCat = yCatPos -= 1;
-                document.getElementById("yAxisCat").innerHTML = moveCat;
-                
-            }
-
-            else if (xCatPos == 0) {
-
-                var moveCat = yCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
-            }
 
     }
 
