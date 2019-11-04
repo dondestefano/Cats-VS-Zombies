@@ -2,28 +2,53 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="zombie.js"></script>
+    <script type="text/javascript" src="cat.js"></script>
 </head>
 
 <header>hej
 </header>
 
-<body onload="startingPosition();startingSteps();">
+<body onload="startingPosition();startingSteps();startingPositionZombie();startingPositionCat()">
 
     <content id=game>
         <section id=map>
+            Player position: 
             <output id=yAxis></output>
             <output id=xAxis></output>
         </section>
         <br><br>
 
         <section id=stepCounter>Steps <output id=numberOfSteps></output></section>
+
+        <section id=zombie>
+            Zombie Position: 
+            <output id=yAxisZombie></output>
+            <output id=xAxisZombie></output>
+        </section>
+
+        <br><br>
+
+        <section id=cat>
+            Cat position: 
+            <output id=yAxisCat></output>
+            <output id=xAxisCat></output>
+        </section>
+
         <br><br>
         
+        <section id=cat>
+            Cat position: 
+            <output id=random></output>
+        </section>
+
+        <br><br>
+
         <section id=controls>
-            <button type="button" id=up onclick="moveUp();countSteps();">Up</button>
-            <button type="button" id=down onclick="moveDown();countSteps();">Down</button>
-            <button type="button" id=left onclick="moveLeft();countSteps();">Left</button>
-            <button type="button" id=right onclick="moveRight();countSteps()">Right</button>
+            <button type="button" id=up onclick="moveUp();countSteps();hunt();flee();">Up</button>
+            <button type="button" id=down onclick="moveDown();countSteps();hunt();flee();">Down</button>
+            <button type="button" id=left onclick="moveLeft();countSteps();hunt();flee();">Left</button>
+            <button type="button" id=right onclick="moveRight();countSteps();hunt();flee();">Right</button>
 
         </section>
     </content>
