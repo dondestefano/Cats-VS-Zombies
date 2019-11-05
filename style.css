@@ -125,18 +125,12 @@ body    {
     grid-template-rows: 90px 90px 90px;
 }
 
-#controls button  {
-    background: #4CAF50;
-    border: none;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    box-shadow: 0 0 20px #000000a6; 
+#controls img {
+    width: 100%;
+}
+
+#controls img:active    {
+    transform: scale(0.95);
 }
 
 #up {
