@@ -6,53 +6,65 @@
     <script type="text/javascript" src="cat.js"></script>
 </head>
 
-<header>hej
+<header>
 </header>
 
 <body onload="startingPosition();startingSteps();startingPositionZombie();startingPositionCat()">
 
     <content id=game>
-        <section id=map>
-            Player position: 
-            <output id=yAxis></output>
-            <output id=xAxis></output>
-        </section>
-        <br><br>
-
-        <section id=stepCounter>Steps <output id=numberOfSteps></output></section>
-
-        <section id=zombie>
-            Zombie Position: 
-            <output id=yAxisZombie></output>
-            <output id=xAxisZombie></output>
-        </section>
-
-        <br><br>
-
-        <section id=cat>
-            Cat position: 
-            <output id=yAxisCat></output>
-            <output id=xAxisCat></output>
-        </section>
-
-        <br><br>
         
-        <section id=cat>
-            Cat position: 
-            <output id=random></output>
-        </section>
+        <aside id=playerData>
 
-        <br><br>
+            <section id=map>
+                Player position:<br> 
+                <output id=yAxis></output>
+                <output id=xAxis></output>
+            </section>
+    
+            <section id=stepCounter>Steps <br>
+                <output id=numberOfSteps></output>
+            </section>
 
-        <section id=controls>
-            <button type="button" id=up onclick="moveUp();countSteps();hunt();flee();">Up</button>
-            <button type="button" id=down onclick="moveDown();countSteps();hunt();flee();">Down</button>
-            <button type="button" id=left onclick="moveLeft();countSteps();hunt();flee();">Left</button>
-            <button type="button" id=right onclick="moveRight();countSteps();hunt();flee();">Right</button>
+            <section id=zombie>
+                Zombie Position:<br>
+                <output id=yAxisZombie></output>
+                <output id=xAxisZombie></output>
+            </section>
 
-        </section>
+            <section id=cat>
+                Cat position:<br>
+                <output id=yAxisCat></output>
+                <output id=xAxisCat></output>
+            </section>
+        
+            <section id=cat>
+                Cat position:<br> 
+                <output id=random></output>
+            </section>
+
+        </aside>
+
+    <content id=screen>
+    </content>
+
+    <aside id=zombieIndicator>
+    </aside>
+
+    <aside id=catIndicator>
+    </aside>
+
+         <section id=playerUI>
+
+            <nav id=controls>
+                <button type="button" id=up onclick="moveUp();countSteps();hunt();flee();">&#9651</button>
+                <br><br>
+                <button type="button" id=left onclick="moveLeft();countSteps();hunt();flee();">&#9665</button>
+                <button type="button" id=right onclick="moveRight();countSteps();hunt();flee();">&#9655</button>
+                <br><br>
+                <button type="button" id=down onclick="moveDown();countSteps();hunt();flee();">&#9661</button>
+            </nav>
+            
+        </section>       
     </content>
 
 </body>
-
-<footer></footer>
