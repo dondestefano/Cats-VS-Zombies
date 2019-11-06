@@ -12,48 +12,17 @@
 <body onload="startingPosition();startingSteps();startingPositionZombie();startingPositionCat()">
 
     <content id=game>
-        
-        <aside id=playerData>
+        <content id=screen>
+                <img id=background src="images/monastery.jpg">
+                
+                <aside id=zombieIndicator>
+                </aside>
 
-            <section id=map>
-                Player position:<br> 
-                <output id=yAxis></output>
-                <output id=xAxis></output>
-            </section>
-    
-            <section id=stepCounter>Steps <br>
-                <output id=numberOfSteps></output>
-            </section>
+                <aside id=catIndicator>
+                </aside>
+        </content>
 
-            <section id=zombie>
-                Zombie Position:<br>
-                <output id=yAxisZombie></output>
-                <output id=xAxisZombie></output>
-            </section>
-
-            <section id=cat>
-                Cat position:<br>
-                <output id=yAxisCat></output>
-                <output id=xAxisCat></output>
-            </section>
-        
-            <section id=cat>
-                Cat position:<br> 
-                <output id=random></output>
-            </section>
-
-        </aside>
-
-    <content id=screen>
-    </content>
-
-    <aside id=zombieIndicator>
-    </aside>
-
-    <aside id=catIndicator>
-    </aside>
-
-         <section id=playerUI>
+        <content id=playerUI>
 
             <nav id=controls>
                 <img id=up src="images/up.png" onclick="moveUp();countSteps();hunt();flee();"/>
@@ -63,8 +32,40 @@
                 <br><br>
                 <img id=down src="images/down.png" onclick="moveDown();countSteps();hunt();flee();"/>
             </nav>
+
+            <aside id=playerData>
+
+                    <section id=map>
+                        Player position:<br> 
+                        <output id=yAxis></output>
+                        <output id=xAxis></output>
+                    </section>
             
-        </section>       
+                    <section id=stepCounter>Steps <br>
+                        <output id=numberOfSteps></output>
+                    </section>
+        
+                    <section id=zombie>
+                        Zombie Position:<br>
+                        <output id=yAxisZombie></output>
+                        <output id=xAxisZombie></output>
+                    </section>
+        
+                    <section id=cat>
+                        Cat position:<br>
+                        <output id=yAxisCat></output>
+                        <output id=xAxisCat></output>
+                    </section>
+                
+                    <section id=cat>
+                        Cat position:<br> 
+                        <output id=random></output>
+                    </section>
+        
+                </aside>
+            
+            </content>   
+
     </content>
 
 </body>
