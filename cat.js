@@ -1,60 +1,63 @@
+var yCatPos = 0;
+var xCatPos = 0;
+
+
 //Place the cat on the map
 function startingPositionCat()   {
 
-    document.getElementById("xAxisCat").innerHTML = "6";
-    document.getElementById("yAxisCat").innerHTML = "6";
+    yCatPos = 4;
+    document.getElementById("yAxisCat").innerHTML = yCatPos;
+
+    xCatPos = 4;
+    document.getElementById("xAxisCat").innerHTML = xCatPos;
 
 }
 
-//Move the cat every 2nd step
+//Move the cat every 5th step
 function flee() {
 
-        //Get the cat's position
-        var xCatPos = parseInt(document.getElementById("xAxisCat").innerHTML);
-        var yCatPos = parseInt(document.getElementById("yAxisCat").innerHTML);
-    
-        //Get the player's position
-        var xPlayerPos = parseInt(document.getElementById("xAxis").innerHTML);
-        var yPlayerPos = parseInt(document.getElementById("yAxis").innerHTML);
-    
-        //See how many steps the player has taken
-        var playerSteps = parseInt(document.getElementById("numberOfSteps").innerHTML);
-
-    if (playerSteps % 2 == 0)    {
+    if (steps % 2 == 0)    {
 
         //Make a Random decision if the cat is going to move away on the x or the y axis
-        var catDecision = Math.floor(Math.random() * 100) + 1;;
+        var catDecision = Math.floor(Math.random() * 100) + 1;
 
+        // ATTENTION Temporary section to test if the cat moves properly
         document.getElementById("random").innerHTML = catDecision;
 
         if (catDecision < 50) {
 
-        //Move the cat one step away from the player without stepping out of the x-axis
+            //Move the cat one step away from the player without stepping out of the x-axis
             if (xCatPos == 7) {
 
-                var moveCat = xCatPos -= 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
+                xCatPos -= 1;
+                document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
             else if (xCatPos == 0) {
 
-                var moveCat = xCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
+                xCatPos += 1;
+                document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
-            else if (xCatPos > xPlayerPos && xCatPos < 7 && xCatPos > 0) {
+            else if (xCatPos == xPosition) {
 
-                var moveCat = xCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
+                xCatPos += 1;
+                document.getElementById("xAxisCat").innerHTML = xCatPos;
+            }
 
-                }
+            else if (xCatPos > xPosition + 1) {
 
-            else if (xCatPos < xPlayerPos && xCatPos < 7 && xCatPos > 0) {
+                xCatPos += 1;
+                document.getElementById("xAxisCat").innerHTML = xCatPos;
+
+            }
+
+            else if (xCatPos < xPosition) {
 
                 var moveCat = yCatPos -= 1;
-                document.getElementById("xAxisCat").innerHTML = moveCat;
+                document.getElementById("xAxisCat").innerHTML = xCatPos;
     
-                }
+            }
 
         }
         
@@ -63,28 +66,34 @@ function flee() {
         //Move the cat away from the player without stepping out of the y-axis
             if (yCatPos == 7) {
 
-                var moveCat = yCatPos -= 1;
-                document.getElementById("yAxisCat").innerHTML = moveCat;
+                yCatPos -= 1;
+                document.getElementById("yAxisCat").innerHTML = yCatPos;
             
                 }
 
             else if (yCatPos == 0) {
 
-                var moveCat = yCatPos += 1;
-                document.getElementById("yAxisCat").innerHTML = moveCat;
+                yCatPos += 1;
+                document.getElementById("yAxisCat").innerHTML = yCatPos;
+                }
+            
+            else if (yCatPos == yPosition) {
+
+                yCatPos += 1;
+                document.getElementById("yAxisCat").innerHTML = yCatPos;
+                }            
+
+            else if (yCatPos > yPosition + 1) {
+
+                yCatPos += 1;
+                document.getElementById("yAxisCat").innerHTML = yCatPos;
+
                 }
 
-            else if (yCatPos > yPlayerPos && yCatPos < 7 && yCatPos > 0) {
+            else if (yCatPos < yPosition) {
 
-                var moveCat = yCatPos += 1;
-                document.getElementById("yAxisCat").innerHTML = moveCat;
-
-                }
-
-            else if (yCatPos < yPlayerPos && yCatPos < 7 && yCatPos > 0) {
-
-                var moveCat = yCatPos -= 1;
-                document.getElementById("yAxisCat").innerHTML = moveCat;
+                yCatPos -= 1;
+                document.getElementById("yAxisCat").innerHTML = yCatPos;
     
                 }
 

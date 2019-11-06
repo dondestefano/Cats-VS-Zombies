@@ -1,8 +1,15 @@
+var yPosition = 0;
+var xPosition = 0;
+var steps = 0;
+
 //Starting position
 function startingPosition() {
 
-    document.getElementById("xAxis").innerHTML = "2";
-    document.getElementById("yAxis").innerHTML = "2";
+    yPosition = 2;
+    xPosition = 2;
+    document.getElementById("yAxis").innerHTML = yPosition;
+    document.getElementById("xAxis").innerHTML = xPosition;
+    document.getElementById("numberOfSteps").innerHTML = steps;
 
 }
 
@@ -10,22 +17,20 @@ function startingPosition() {
 //Move the player
 function moveUp()   {
 
-    var yPosition = parseInt(document.getElementById("yAxis").innerHTML);
-
     if (yPosition == 0) {
-        var move = yPosition += 1;
-        document.getElementById("yAxis").innerHTML = move;
+        yPosition += 1;
+        document.getElementById("yAxis").innerHTML = yPosition;
         document.getElementById("down").style.visibility = 'visible';
     }
 
     else if (yPosition < 6) {
-        var move = yPosition += 1;
-        document.getElementById("yAxis").innerHTML = move;
+        yPosition += 1;
+        document.getElementById("yAxis").innerHTML = yPosition;
     }
 
     else if (yPosition == 6) {
-        var move = yPosition += 1;
-        document.getElementById("yAxis").innerHTML = move;
+        yPosition += 1;
+        document.getElementById("yAxis").innerHTML = yPosition;
         document.getElementById("up").style.visibility = 'hidden';
     }
 
@@ -34,22 +39,20 @@ function moveUp()   {
 
 function moveDown()   {
 
-    var yPosition = parseInt(document.getElementById("yAxis").innerHTML);
-
     if (yPosition == 7) {
-        var move = yPosition -= 1;
-        document.getElementById("yAxis").innerHTML = move;
+        yPosition -= 1;
+        document.getElementById("yAxis").innerHTML = yPosition;
         document.getElementById("up").style.visibility = 'visible';
     }
     
     else if (yPosition > 1) {
-        var move = yPosition -= 1;
-        document.getElementById("yAxis").innerHTML = move;
+        yPosition -= 1;
+        document.getElementById("yAxis").innerHTML = yPosition;
     }
 
     else if (yPosition == 1) {
-        var move = yPosition -= 1;
-        document.getElementById("yAxis").innerHTML = move;
+        yPosition -= 1;
+        document.getElementById("yAxis").innerHTML = yPosition;
         document.getElementById("down").style.visibility = 'hidden';
     }
 
@@ -58,22 +61,20 @@ function moveDown()   {
 
 function moveLeft()   {
 
-    var xPosition = parseInt(document.getElementById("xAxis").innerHTML);
-
     if (xPosition == 7) {
-        var move = xPosition -= 1;
-        document.getElementById("xAxis").innerHTML = move;
+        xPosition -= 1;
+        document.getElementById("xAxis").innerHTML = xPosition;
         document.getElementById("right").style.visibility = 'visible';
     }
 
     else if (xPosition > 1) {
-        var move = xPosition -= 1;
-        document.getElementById("xAxis").innerHTML = move;
+        xPosition -= 1;
+        document.getElementById("xAxis").innerHTML = xPosition;
     }
 
     else if (xPosition == 1) {
-        var move = xPosition -= 1;
-        document.getElementById("xAxis").innerHTML = move;
+        xPosition -= 1;
+        document.getElementById("xAxis").innerHTML = xPosition;
         document.getElementById("left").style.visibility = 'hidden';
     }
    
@@ -82,22 +83,20 @@ function moveLeft()   {
 
 function moveRight()   {
 
-    var xPosition = parseInt(document.getElementById("xAxis").innerHTML);
-
     if (xPosition == 0) {
-        var move = xPosition += 1;
-        document.getElementById("xAxis").innerHTML = move;
+        xPosition += 1;
+        document.getElementById("xAxis").innerHTML = xPosition;
         document.getElementById("left").style.visibility = 'visible';
     }
 
     else if (xPosition < 6) {
-        var move = xPosition += 1;
-        document.getElementById("xAxis").innerHTML = move;
+        xPosition += 1;
+        document.getElementById("xAxis").innerHTML = xPosition;
     }
 
     else if (xPosition == 6) {
-        var move = xPosition += 1;
-        document.getElementById("xAxis").innerHTML = move;
+        xPosition += 1;
+        document.getElementById("xAxis").innerHTML = xPosition;
         document.getElementById("right").style.visibility = 'hidden';
     }
 
@@ -105,12 +104,9 @@ function moveRight()   {
 }
 
 //Keep track of how many steps the player has made
-function startingSteps()   {
-    document.getElementById("numberOfSteps").innerHTML = "0";
-}
 
 function countSteps()   {
-    var steps = parseInt(document.getElementById("numberOfSteps").innerHTML);
+
     steps += 1;
     document.getElementById("numberOfSteps").innerHTML = steps;
 }

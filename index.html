@@ -9,7 +9,7 @@
 <header>
 </header>
 
-<body onload="startingPosition();startingSteps();startingPositionZombie();startingPositionCat()">
+<body onload="startingPosition();startingPositionZombie();startingPositionCat()">
 
     <content id=game>
         <content id=screen>
@@ -25,12 +25,12 @@
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/up.png" onclick="moveUp();countSteps();hunt();flee();"/>
+                <img id=up src="images/up.png" onclick="countSteps();hunt();flee();moveUp();"/>
                 <br><br>
-                <img id=left src="images/left.png" onclick="moveLeft();countSteps();hunt();flee();"/>
-                <img id=right src="images/right.png" onclick="moveRight();countSteps();hunt();flee();"/>
+                <img id=left src="images/left.png" onclick="countSteps();hunt();flee();moveLeft();"/>
+                <img id=right src="images/right.png" onclick="countSteps();hunt();flee();moveRight();"/>
                 <br><br>
-                <img id=down src="images/down.png" onclick="moveDown();countSteps();hunt();flee();"/>
+                <img id=down src="images/down.png" onclick="countSteps();hunt();flee();moveDown();"/>
             </nav>
 
             <aside id=playerData>
