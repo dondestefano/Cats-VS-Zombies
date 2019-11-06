@@ -4,16 +4,17 @@
     <script type="text/javascript" src="player.js"></script>
     <script type="text/javascript" src="zombie.js"></script>
     <script type="text/javascript" src="cat.js"></script>
+    <script type="text/javascript" src="map.js"></script>
 </head>
 
 <header>
 </header>
 
-<body onload="startingPosition();startingPositionZombie();startingPositionCat()">
+<body onload="startingPosition();startingPositionZombie();startingPositionCat();nextArea();">
 
     <content id=game>
         <content id=screen>
-                <img id=background src="images/monastery.jpg">
+                <img id=background src="nope">
                 
                 <aside id=zombieIndicator>
                 </aside>
@@ -25,12 +26,12 @@
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/up.png" onclick="countSteps();hunt();flee();moveUp();"/>
+                <img id=up src="images/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();"/>
                 <br><br>
-                <img id=left src="images/left.png" onclick="countSteps();hunt();flee();moveLeft();"/>
-                <img id=right src="images/right.png" onclick="countSteps();hunt();flee();moveRight();"/>
+                <img id=left src="images/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();"/>
+                <img id=right src="images/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();"/>
                 <br><br>
-                <img id=down src="images/down.png" onclick="countSteps();hunt();flee();moveDown();"/>
+                <img id=down src="images/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();"/>
             </nav>
 
             <aside id=playerData>

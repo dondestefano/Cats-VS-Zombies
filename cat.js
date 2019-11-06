@@ -27,7 +27,7 @@ function flee() {
         if (catDecision < 50) {
 
             //Move the cat one step away from the player without stepping out of the x-axis
-            if (xCatPos == 7) {
+            if (xCatPos == 6) {
 
                 xCatPos -= 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
@@ -64,7 +64,7 @@ function flee() {
         else if (catDecision > 50)  {
 
         //Move the cat away from the player without stepping out of the y-axis
-            if (yCatPos == 7) {
+            if (yCatPos == 6) {
 
                 yCatPos -= 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;

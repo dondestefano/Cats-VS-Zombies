@@ -23,12 +23,12 @@ function moveUp()   {
         document.getElementById("down").style.visibility = 'visible';
     }
 
-    else if (yPosition < 6) {
+    else if (yPosition < 5) {
         yPosition += 1;
         document.getElementById("yAxis").innerHTML = yPosition;
     }
 
-    else if (yPosition == 6) {
+    else if (yPosition == 5) {
         yPosition += 1;
         document.getElementById("yAxis").innerHTML = yPosition;
         document.getElementById("up").style.visibility = 'hidden';
@@ -39,7 +39,7 @@ function moveUp()   {
 
 function moveDown()   {
 
-    if (yPosition == 7) {
+    if (yPosition == 6) {
         yPosition -= 1;
         document.getElementById("yAxis").innerHTML = yPosition;
         document.getElementById("up").style.visibility = 'visible';
@@ -61,7 +61,7 @@ function moveDown()   {
 
 function moveLeft()   {
 
-    if (xPosition == 7) {
+    if (xPosition == 6) {
         xPosition -= 1;
         document.getElementById("xAxis").innerHTML = xPosition;
         document.getElementById("right").style.visibility = 'visible';
@@ -89,12 +89,12 @@ function moveRight()   {
         document.getElementById("left").style.visibility = 'visible';
     }
 
-    else if (xPosition < 6) {
+    else if (xPosition < 5) {
         xPosition += 1;
         document.getElementById("xAxis").innerHTML = xPosition;
     }
 
-    else if (xPosition == 6) {
+    else if (xPosition == 5) {
         xPosition += 1;
         document.getElementById("xAxis").innerHTML = xPosition;
         document.getElementById("right").style.visibility = 'hidden';
