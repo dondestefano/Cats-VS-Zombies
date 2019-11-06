@@ -12,59 +12,60 @@
 <body onload="startingPosition();startingSteps();startingPositionZombie();startingPositionCat()">
 
     <content id=game>
-        
-        <aside id=playerData>
+        <content id=screen>
+                <img id=background src="images/monastery.jpg">
+                
+                <aside id=zombieIndicator>
+                </aside>
 
-            <section id=map>
-                Player position:<br> 
-                <output id=yAxis></output>
-                <output id=xAxis></output>
-            </section>
-    
-            <section id=stepCounter>Steps <br>
-                <output id=numberOfSteps></output>
-            </section>
+                <aside id=catIndicator>
+                </aside>
+        </content>
 
-            <section id=zombie>
-                Zombie Position:<br>
-                <output id=yAxisZombie></output>
-                <output id=xAxisZombie></output>
-            </section>
-
-            <section id=cat>
-                Cat position:<br>
-                <output id=yAxisCat></output>
-                <output id=xAxisCat></output>
-            </section>
-        
-            <section id=cat>
-                Cat position:<br> 
-                <output id=random></output>
-            </section>
-
-        </aside>
-
-    <content id=screen>
-    </content>
-
-    <aside id=zombieIndicator>
-    </aside>
-
-    <aside id=catIndicator>
-    </aside>
-
-         <section id=playerUI>
+        <content id=playerUI>
 
             <nav id=controls>
-                <button type="button" id=up onclick="moveUp();countSteps();hunt();flee();">&#9651</button>
+                <img id=up src="images/up.png" onclick="moveUp();countSteps();hunt();flee();"/>
                 <br><br>
-                <button type="button" id=left onclick="moveLeft();countSteps();hunt();flee();">&#9665</button>
-                <button type="button" id=right onclick="moveRight();countSteps();hunt();flee();">&#9655</button>
+                <img id=left src="images/left.png" onclick="moveLeft();countSteps();hunt();flee();"/>
+                <img id=right src="images/right.png" onclick="moveRight();countSteps();hunt();flee();"/>
                 <br><br>
-                <button type="button" id=down onclick="moveDown();countSteps();hunt();flee();">&#9661</button>
+                <img id=down src="images/down.png" onclick="moveDown();countSteps();hunt();flee();"/>
             </nav>
+
+            <aside id=playerData>
+
+                    <section id=map>
+                        Player position:<br> 
+                        <output id=yAxis></output>
+                        <output id=xAxis></output>
+                    </section>
             
-        </section>       
+                    <section id=stepCounter>Steps <br>
+                        <output id=numberOfSteps></output>
+                    </section>
+        
+                    <section id=zombie>
+                        Zombie Position:<br>
+                        <output id=yAxisZombie></output>
+                        <output id=xAxisZombie></output>
+                    </section>
+        
+                    <section id=cat>
+                        Cat position:<br>
+                        <output id=yAxisCat></output>
+                        <output id=xAxisCat></output>
+                    </section>
+                
+                    <section id=cat>
+                        Cat position:<br> 
+                        <output id=random></output>
+                    </section>
+        
+                </aside>
+            
+            </content>   
+
     </content>
 
 </body>
