@@ -1,25 +1,26 @@
+//Global Cat-position
 var yCatPos = 0;
 var xCatPos = 0;
 
 
-//Place the cat on the map
+//Place the cat on random spot on the map
 function startingPositionCat()   {
 
-    yCatPos = 4;
+    yCatPos = Math.floor(Math.random() * 7);
     document.getElementById("yAxisCat").innerHTML = yCatPos;
 
-    xCatPos = 4;
+    xCatPos = Math.floor(Math.random() * 7);
     document.getElementById("xAxisCat").innerHTML = xCatPos;
 
 }
 
-//Move the cat every 5th step
+//Move the cat every 2nd step
 function flee() {
 
-    if (steps % 2 == 0)    {
+    if (steps % 2 === 0)    {
 
         //Make a Random decision if the cat is going to move away on the x or the y axis
-        var catDecision = Math.floor(Math.random() * 100) + 1;
+        var catDecision = Math.floor(Math.random() * 100);
 
         // ATTENTION Temporary section to test if the cat moves properly
         document.getElementById("random").innerHTML = catDecision;
@@ -27,19 +28,19 @@ function flee() {
         if (catDecision < 50) {
 
             //Move the cat one step away from the player without stepping out of the x-axis
-            if (xCatPos == 6) {
+            if (xCatPos === 6) {
 
                 xCatPos -= 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
-            else if (xCatPos == 0) {
+            else if (xCatPos === 0) {
 
                 xCatPos += 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
-            else if (xCatPos == xPosition) {
+            else if (xCatPos === xPosition) {
 
                 xCatPos += 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
@@ -52,7 +53,7 @@ function flee() {
 
             }
 
-            else if (xCatPos < xPosition) {
+            else if (xCatPos < xPosition - 1) {
 
                 var moveCat = yCatPos -= 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
@@ -64,20 +65,20 @@ function flee() {
         else if (catDecision > 50)  {
 
         //Move the cat away from the player without stepping out of the y-axis
-            if (yCatPos == 6) {
+            if (yCatPos === 6) {
 
                 yCatPos -= 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;
             
                 }
 
-            else if (yCatPos == 0) {
+            else if (yCatPos === 0) {
 
                 yCatPos += 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;
                 }
             
-            else if (yCatPos == yPosition) {
+            else if (yCatPos === yPosition) {
 
                 yCatPos += 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;
@@ -90,7 +91,7 @@ function flee() {
 
                 }
 
-            else if (yCatPos < yPosition) {
+            else if (yCatPos < yPosition - 1) {
 
                 yCatPos -= 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;

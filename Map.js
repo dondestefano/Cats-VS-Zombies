@@ -1,12 +1,12 @@
-//Create a map of with an are of 7x7
+//Create a map of with an area of 7x7
 var mapForest = [
     [10, 10, 10, 10, 10, 10, 10],
-    [12, 12, 10, 12, 10, 12, 00],
+    [12, 12, 22, 12, 10, 12, 00],
+    [1, 22, 22, 1, 1, 1, 0],
     [1, 1, 1, 1, 1, 1, 0],
     [1, 1, 1, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 0]
+    [1, 2, 1, 1, 1, 1, 0],
+    [1, 12, 1, 1, 1, 1, 0]
 ];
 
 function nextArea() {
@@ -17,7 +17,7 @@ function nextArea() {
 
             if (y == yPosition && x == xPosition) { 
                 
-                mapArea = "images/" + yPosition + xPosition + ".jpg" //mapArea = "images/" + mapForest[y[x]] + ".jpg"
+                mapArea = "images/" + mapForest[y][x] + ".jpg" //mapArea = "images/" + mapForest[y][x] + ".jpg"
 
                 document.getElementById("background").src = mapArea;
             
