@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
 /* Prevents images from being marked or dragged */
@@ -11,33 +13,31 @@ img {
     -ms-user-select: none;
 }
 
+/* Application size */
+
 body    {
-    width: 100vh;
-    height: 100vh;
+    display: grid;
     margin: auto;
 }
 
-
+/* Game Screen */
 #game   {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
+    grid-template-columns: repeat(5, 20vmin);
+    grid-template-rows: repeat(6, 15vmin);
+    margin: auto;
     background-color: black;
-}
-
-#playerData {
-    z-index: 3;
-    grid-column-start: 3;
     grid-row-start: 1;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-
+    grid-row-end: end;
+    grid-column-start: 1;
+    grid-column-end: end;
 }
 
 #screen {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: repeat(5, 20vmin);
+    grid-template-rows: repeat(6, 15vmin);
+    margin: auto;
     z-index: 10;
     grid-column-start: 1;
     grid-column-end: end;
@@ -46,14 +46,71 @@ body    {
 }
 
 #background {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 100vmin;
+    background-size: cover;
+    grid-template-columns: repeat(5, 20vmin);
+    grid-template-rows: repeat(6, 15vmin);    
     grid-column-start: 1;
     grid-column-end: end;
     grid-row-start: 1;
     grid-row-end: end;
 }
+
+/* Pop-ups */
+#event {
+    z-index: 1000;
+    background-color: black;
+    object-fit: cover;
+    grid-template-columns: repeat(5, 20vmin);
+    grid-template-rows: repeat(6, 15vmin);
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: 1;
+    grid-row-end: end;
+    opacity: 50%;
+}
+
+#zombie {
+    width: 100%;
+    z-index: 1002;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-self: center;
+}
+
+#cat {
+    width: 200px;
+    z-index: 1001;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 5;
+    justify-self: center;
+}
+
+#detail {
+    z-index: 900;
+    grid-template-columns: repeat(5, 20vmin);
+    grid-template-rows: repeat(6, 15vmin);
+    margin: auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    justify-self: center;
+}
+
+#anotherDetail {
+    z-index: 900;
+    width: 500px;
+    grid-template-columns: repeat(5, 20vmin);
+    grid-template-rows: repeat(6, 15vmin);
+    margin: auto;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    justify-self: center;
+}
+
 
 #zombieIndicator    {
     z-index: 13;
@@ -69,40 +126,71 @@ body    {
     animation: pulse 2s infinite;
 }
 
-#map    {
+#catIndicator    {
+    z-index: 13;
+    display: block;
+    padding: auto;
+    margin: auto;
+    height: 80%;
+    width: 60%;
+    border-radius: 50%;
+    background: red;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    animation: pulse 2s infinite;
+}
+
+/* Player user interface */
+#playerUI   {
+    z-index: 1000;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    display: grid;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(68, 68, 68);
+    grid-template-rows: 5vmin 20vmin 5vmin;
+    grid-template-columns: 33vmin 33vmin 33vmin;
+    margin: auto;
+    box-shadow: 0px -8px 5px black;
+}
+
+#playerData {
+    z-index: 3;
+    background: rgb(61, 61, 61);
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+    width: 25vmin;
+    padding: 5%;
+    margin-top: 10%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+#map    { 
     color: white;
 }
 
 
 #stepCounter    {
-    width: 50px;
-    height: 30px;    
+   
     color: blue;
 }
 
-#zombie    {  
+#zombieCounter    {  
+    width: 200px;
+    height: 30px;  
     color: red;
 }
 
-#cat    {  
+#cat    { 
     color: green;
 }
 
-#playerUI   {
-    z-index: 11;
-    grid-column-start: 1;
-    grid-column-end: span 5;
-    grid-row-start: 5;
-    grid-row-end: span 5;
-    display: grid;
-    border-style: solid;
-    border-color: black;
-    background-color: rgb(68, 68, 68);
-    grid-template-rows: 10% 1fr 10%;
-    grid-template-columns: 1fr 1fr 1fr;
-    box-shadow: 0px -8px 5px black;
-}
-
+/* controller */
 #controls   {
     grid-column-start: 2;
     margin: auto;

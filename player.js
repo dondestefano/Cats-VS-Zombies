@@ -9,7 +9,7 @@ function startingPosition() {
     xPosition = 2;
     document.getElementById("yAxis").innerHTML = yPosition;
     document.getElementById("xAxis").innerHTML = xPosition;
-    document.getElementById("numberOfSteps").innerHTML = steps;
+    document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
 
 }
 
@@ -108,5 +108,5 @@ function moveRight()   {
 function countSteps()   {
 
     steps += 1;
-    document.getElementById("numberOfSteps").innerHTML = steps;
+    document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
 }

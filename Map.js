@@ -32,7 +32,7 @@ function nextArea() {
 
             if (y == yPosition && x == xPosition) { 
                 
-                mapArea = "images/areas" + mapForest[y][x] + ".jpg"
+                mapArea = "images/areas/" + mapForest[y][x] + ".jpg"
 
                 document.getElementById("background").src = mapArea;
             
