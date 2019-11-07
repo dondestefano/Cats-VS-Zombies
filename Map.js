@@ -1,13 +1,28 @@
-//Create a map of with an area of 7x7
-var mapForest = [
-    [10, 10, 10, 10, 10, 10, 10],
-    [12, 12, 22, 12, 10, 12, 00],
-    [1, 22, 22, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1, 1, 0],
-    [1, 2, 1, 1, 1, 1, 0],
-    [1, 12, 1, 1, 1, 1, 0]
-];
+//Create a map
+var mapForest = [];
+
+//Randomize the values in each area of the map
+
+function createMap() {
+
+    for (y = 0; y < 7; y++) {
+
+        var xPos = [];
+
+            for (var x = 0; x < 7; x++) {
+
+            var location = parseInt(Math.floor(Math.random() * 100 + 1));
+
+            xPos.push(location)
+
+            }
+
+        mapForest.push(xPos);
+       
+    }
+    
+
+}
 
 function nextArea() {
     var mapArea = "";
@@ -17,7 +32,7 @@ function nextArea() {
 
             if (y == yPosition && x == xPosition) { 
                 
-                mapArea = "images/" + mapForest[y][x] + ".jpg" //mapArea = "images/" + mapForest[y][x] + ".jpg"
+                mapArea = "images/areas" + mapForest[y][x] + ".jpg"
 
                 document.getElementById("background").src = mapArea;
             

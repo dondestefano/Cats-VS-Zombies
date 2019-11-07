@@ -7,7 +7,7 @@
     <script type="text/javascript" src="map.js"></script>
 </head>
 
-<body onload="startingPosition();startingPositionZombie();startingPositionCat();nextArea();">
+<body onload="createMap();startingPosition();startingPositionZombie();startingPositionCat();nextArea();">
 
     <content id=game>
         <content id=screen>
@@ -23,12 +23,12 @@
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();"/>
+                <img id=up src="images/controls/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();"/>
                 <br><br>
-                <img id=left src="images/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();"/>
-                <img id=right src="images/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();"/>
+                <img id=left src="images/controls/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();"/>
+                <img id=right src="images/controls/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();"/>
                 <br><br>
-                <img id=down src="images/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();"/>
+                <img id=down src="images/controls/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();"/>
             </nav>
 
             <aside id=playerData>

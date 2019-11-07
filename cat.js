@@ -20,14 +20,14 @@ function flee() {
     if (steps % 2 === 0)    {
 
         //Make a Random decision if the cat is going to move away on the x or the y axis
-        var catDecision = Math.floor(Math.random() * 100);
+        var catDecision = Math.floor(Math.random() * 2 + 1);
 
-        // ATTENTION Temporary section to test if the cat moves properly
+        //ATTENTION Temporary section to test if the cat moves properly
         document.getElementById("random").innerHTML = catDecision;
 
-        if (catDecision < 50) {
+        if (catDecision === 1) {
 
-            //Move the cat one step away from the player without stepping out of the x-axis
+            //Keep the cat from stepping out of the x-axis.
             if (xCatPos === 6) {
 
                 xCatPos -= 1;
@@ -46,25 +46,25 @@ function flee() {
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
-            else if (xCatPos > xPosition + 1) {
+            else if (xCatPos > xPosition) {
 
                 xCatPos += 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
 
             }
 
-            else if (xCatPos < xPosition - 1) {
+            else if (xCatPos < xPosition) {
 
-                var moveCat = yCatPos -= 1;
+                xCatPos -= 1;
                 document.getElementById("xAxisCat").innerHTML = xCatPos;
     
             }
 
         }
         
-        else if (catDecision > 50)  {
+        else if (catDecision === 2)  {
 
-        //Move the cat away from the player without stepping out of the y-axis
+            //Keep the cat from stepping out of the y-axis.
             if (yCatPos === 6) {
 
                 yCatPos -= 1;
@@ -84,14 +84,14 @@ function flee() {
                 document.getElementById("yAxisCat").innerHTML = yCatPos;
                 }            
 
-            else if (yCatPos > yPosition + 1) {
+            else if (yCatPos > yPosition) {
 
                 yCatPos += 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;
 
                 }
 
-            else if (yCatPos < yPosition - 1) {
+            else if (yCatPos < yPosition) {
 
                 yCatPos -= 1;
                 document.getElementById("yAxisCat").innerHTML = yCatPos;
