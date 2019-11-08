@@ -21,7 +21,7 @@ body    {
 }
 
 /* Game Screen */
-#game   {
+main   {
     display: grid;
     grid-template-columns: repeat(5, 20vmin);
     grid-template-rows: repeat(6, 15vmin);
@@ -43,6 +43,7 @@ body    {
     grid-column-end: end;
     grid-row-start: 1;
     grid-row-end: end;
+    justify-content: center;
 }
 
 #background {
@@ -82,11 +83,12 @@ body    {
 }
 
 #cat {
-    width: 200px;
-    z-index: 1001;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    grid-column-start: 5;
+    width: 100%;
+    z-index: 1003;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 5;
     justify-self: center;
 }
 
@@ -117,8 +119,8 @@ body    {
     display: block;
     padding: auto;
     margin: auto;
-    height: 80%;
-    width: 60%;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     background: red;
     grid-row-start: 2;
@@ -136,7 +138,7 @@ body    {
     border-radius: 50%;
     background: red;
     grid-row-start: 3;
-    grid-column-start: 1;
+    grid-column: 1;
     animation: pulse 2s infinite;
 }
 
@@ -152,7 +154,7 @@ body    {
     border-color: black;
     background-color: rgb(68, 68, 68);
     grid-template-rows: 5vmin 20vmin 5vmin;
-    grid-template-columns: 33vmin 33vmin 33vmin;
+    grid-template-columns: 33.3vmin 33.3vmin 33.3vmin;
     margin: auto;
     box-shadow: 0px -8px 5px black;
 }
@@ -233,18 +235,18 @@ body    {
 @keyframes pulse
 {
     0% {
-        height: 50%;
-        width: 50%;
+        height: 20px;
+        width: 20px;
         box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.2);
     }
     90% {
-        height: 60%;
-        width: 60%;
+        height: 40px;
+        width: 40px;
         box-shadow: 0 0 0 35px rgba(255, 0, 0, 0);
     }
     100% {
-        height: 50%;
-        width: 50%;
+        height: 20px;
+        width: 20px;
         box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
     }
 }
