@@ -4,33 +4,46 @@
     <script type="text/javascript" src="player.js"></script>
     <script type="text/javascript" src="zombie.js"></script>
     <script type="text/javascript" src="cat.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="gamestate.js"></script>
 </head>
 
-<header>
-</header>
+<body>
 
-<body onload="startingPosition();startingSteps();startingPositionZombie();startingPositionCat()">
+    <main id=game>
+        <nav id=screen>
 
-    <content id=game>
-        <content id=screen>
-                <img id=background src="images/monastery.jpg">
+                <img id=background src="">
                 
-                <aside id=zombieIndicator>
-                </aside>
+                <figure id=zombieIndicator>
+                </figure>
 
-                <aside id=catIndicator>
-                </aside>
-        </content>
+                <figur id=catIndicator>
+                </figur>
+
+                <figur id=detail>                   
+                </figur>
+
+                <figur id=anotherDetail>                   
+                </figur>
+                
+                <figur id=event>                   
+                    </figur>
+
+                <img id=cat src="images/characters/kitty.png">
+                <img id=zombie src="images/characters/zooombie.png">
+
+                </nav>
 
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/up.png" onclick="moveUp();countSteps();hunt();flee();"/>
+                <img id=up src="images/controls/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();"/>
                 <br><br>
-                <img id=left src="images/left.png" onclick="moveLeft();countSteps();hunt();flee();"/>
-                <img id=right src="images/right.png" onclick="moveRight();countSteps();hunt();flee();"/>
+                <img id=left src="images/controls/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();"/>
+                <img id=right src="images/controls/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();"/>
                 <br><br>
-                <img id=down src="images/down.png" onclick="moveDown();countSteps();hunt();flee();"/>
+                <img id=down src="images/controls/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();"/>
             </nav>
 
             <aside id=playerData>
@@ -41,11 +54,11 @@
                         <output id=xAxis></output>
                     </section>
             
-                    <section id=stepCounter>Steps <br>
+                    <section id=stepCounter>
                         <output id=numberOfSteps></output>
                     </section>
         
-                    <section id=zombie>
+                    <section id=zombieCounter>
                         Zombie Position:<br>
                         <output id=yAxisZombie></output>
                         <output id=xAxisZombie></output>
@@ -57,15 +70,20 @@
                         <output id=xAxisCat></output>
                     </section>
                 
-                    <section id=cat>
+                    <section id=random>
                         Cat position:<br> 
                         <output id=random></output>
                     </section>
         
-                </aside>
+            </aside>
             
-            </content>   
+        </content>   
 
-    </content>
+    </main>
+
+    <main id=menu>  
+        <img id=logo src="images/assets/cvzlogo.png">
+        <img id=playButton src="images/assets/playbtn.png" onclick=startGame();> 
+    </main>
 
 </body>
