@@ -10,25 +10,27 @@
 
 <body>
 
+    <main id=menu>  
+        <img id=logo src="images/assets/cvzlogo.png">
+        <img id=playButton src="images/assets/playbtn.png" onclick=startGame();> 
+    </main>
+
     <main id=game>
         <nav id=screen>
 
-                <img id=background src="">
-                
-                <figure id=zombieIndicator>
+                <img id=background src="">            
+                <img id=zombieIndicator src="images/characters/zombieind_down.png">
+                <img id=catIndicator src="images/characters/catind_down.png">
+
+
+                <figure id=detail>                   
                 </figure>
 
-                <figur id=catIndicator>
-                </figur>
-
-                <figur id=detail>                   
-                </figur>
-
-                <figur id=anotherDetail>                   
-                </figur>
+                <figure id=anotherDetail>                   
+                </figure>
                 
-                <figur id=event>                   
-                    </figur>
+                <figure id=event>                   
+                </figure>
 
                 <img id=cat src="images/characters/kitty.png">
                 <img id=zombie src="images/characters/zooombie.png">
@@ -38,12 +40,12 @@
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/controls/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();"/>
+                <img id=up src="images/controls/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();zombieClose();catClose();"/>
                 <br><br>
-                <img id=left src="images/controls/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();"/>
-                <img id=right src="images/controls/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();"/>
+                <img id=left src="images/controls/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();zombieClose();catClose();"/>
+                <img id=right src="images/controls/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();zombieClose();catClose();"/>
                 <br><br>
-                <img id=down src="images/controls/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();"/>
+                <img id=down src="images/controls/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();zombieClose();catClose();"/>
             </nav>
 
             <aside id=playerData>
@@ -64,7 +66,7 @@
                         <output id=xAxisZombie></output>
                     </section>
         
-                    <section id=cat>
+                    <section id=catCounter>
                         Cat position:<br>
                         <output id=yAxisCat></output>
                         <output id=xAxisCat></output>
@@ -79,11 +81,6 @@
             
         </content>   
 
-    </main>
-
-    <main id=menu>  
-        <img id=logo src="images/assets/cvzlogo.png">
-        <img id=playButton src="images/assets/playbtn.png" onclick=startGame();> 
     </main>
 
 </body>

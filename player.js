@@ -1,3 +1,4 @@
+//Global Player-position and steps
 var yPosition = 0;
 var xPosition = 0;
 var steps = 0;
@@ -12,7 +13,6 @@ function startingPosition() {
     document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
 
 }
-
 
 //Move the player
 function moveUp()   {
