@@ -5,9 +5,10 @@
     <script type="text/javascript" src="zombie.js"></script>
     <script type="text/javascript" src="cat.js"></script>
     <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="gamestate.js"></script>
 </head>
 
-<body onload="createMap();startingPosition();startingPositionZombie();startingPositionCat();nextArea();">
+<body>
 
     <main id=game>
         <nav id=screen>
@@ -78,6 +79,11 @@
             
         </content>   
 
+    </main>
+
+    <main id=menu>  
+        <img id=logo src="images/assets/cvzlogo.png">
+        <img id=playButton src="images/assets/playbtn.png" onclick=startGame();> 
     </main>
 
 </body>

@@ -20,6 +20,37 @@ body    {
     margin: auto;
 }
 
+/* Menu */
+
+#game   {
+    visibility: hidden; /* Hide the game while in the menu */
+}
+
+#menu   {
+    grid-template-columns: 20vmin 60vmin 20vmin;
+    grid-template-rows: 10vmin 20vmin 40vmin 20vmin;
+    justify-items: center;
+    z-index: 9999;
+}
+
+#logo   {
+    width: 50vmin;
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+}
+
+#playButton {
+    width: 30vmin;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    margin-top: 20vmin;
+}
+
+#playButton:active    {
+    transform: scale(0.90);
+}
+
 /* Game Screen */
 main   {
     display: grid;
@@ -93,7 +124,7 @@ main   {
 }
 
 #detail {
-    z-index: 900;
+    z-index: 11;
     grid-template-columns: repeat(5, 20vmin);
     grid-template-rows: repeat(6, 15vmin);
     margin: auto;
@@ -264,3 +295,9 @@ main   {
     100% { 
         box-shadow: 0 0 -10px #92d453a6; }
   }
+
+@keyframes fadeout {
+    0% { opacity: 1; }
+    99%   { opacity: 0; }
+    100%   { visibility: hidden; }
+}
