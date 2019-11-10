@@ -17,8 +17,11 @@
 
     <main id=game>
         <nav id=screen>
+                <img id=cat src="images/characters/kitty.png">
+                <img id=zombie src="images/characters/zooombie.png">  
 
-                <img id=background src="">            
+                <figure id=event></figure>
+
                 <img id=zombieIndicator src="images/characters/zombieind_down.png">
                 <img id=catIndicator src="images/characters/catind_down.png">
 
@@ -28,24 +31,20 @@
 
                 <figure id=anotherDetail>                   
                 </figure>
-                
-                <figure id=event>                   
-                </figure>
 
-                <img id=cat src="images/characters/kitty.png">
-                <img id=zombie src="images/characters/zooombie.png">
+                <img id=background src="">
 
                 </nav>
 
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/controls/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();zombieClose();catClose();"/>
+                <img id=up src="images/controls/up.png" onclick=checkGameOver(up);>
                 <br><br>
-                <img id=left src="images/controls/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();zombieClose();catClose();"/>
-                <img id=right src="images/controls/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();zombieClose();catClose();"/>
+                <img id=left src="images/controls/left.png" onclick=checkGameOver(left);>
+                <img id=right src="images/controls/right.png" onclick=checkGameOver(right);>
                 <br><br>
-                <img id=down src="images/controls/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();zombieClose();catClose();"/>
+                <img id=down src="images/controls/down.png" onclick=checkGameOver(down);>
             </nav>
 
             <aside id=playerData>
@@ -73,7 +72,7 @@
                     </section>
                 
                     <section id=random>
-                        Cat position:<br> 
+                        Cat random:<br> 
                         <output id=random></output>
                     </section>
         

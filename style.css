@@ -27,10 +27,10 @@ body    {
 }
 
 #menu   {
+    z-index: 9999;
     grid-template-columns: 20vmin 60vmin 20vmin;
     grid-template-rows: 10vmin 20vmin 40vmin 20vmin;
     justify-items: center;
-    z-index: 9999;
 }
 
 #logo   {
@@ -91,11 +91,13 @@ main   {
 /* Pop-ups */
 #event {
     z-index: 1000;
-    background-color: black;
-    object-fit: cover;
     grid-template-columns: repeat(5, 20vmin);
     grid-template-rows: repeat(6, 15vmin);
     margin: auto;
+    background-color: black;
+    visibility: hidden;
+    object-fit: cover;
+    display: grid;
     grid-column-start: 1;
     grid-column-end: end;
     grid-row-start: 1;
