@@ -23,7 +23,7 @@ function flee() {
         var catDecision = Math.floor(Math.random() * 2 + 1);
 
         //ATTENTION Temporary section to test if the cat moves properly
-        document.getElementById("random").innerHTML = catDecision;
+
 
         if (catDecision === 1) {
 

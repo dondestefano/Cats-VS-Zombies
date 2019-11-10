@@ -11,26 +11,25 @@ function startGame()    {
 
 }
 
-//Cat has been found and the game ends
-
 //Check if the zombie found you
-function checkGameOver(move) {
+function checkGameOver(playerMoves) {
 
-    var direction = move;
+    var direction = playerMoves;
+    document.getElementById("random").innerHTML = direction;
 
-    if (direction = up && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
+    if (direction === 1 && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
         gameOver();
     }
 
-    else if (direction = down && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
+    else if (direction === 2 && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
         gameOver();
     }
 
-    else if (direction = right && yPosition === yZombiePos && xPosition === xZombiePos + 1)  {
+    else if (direction === 4 && yPosition === yZombiePos && xPosition === xZombiePos - 1)  {
         gameOver();
     }
             
-    else if (direction = left && yPosition === yZombiePos && xPosition === xZombiePos - 1)  {
+    else if (direction === 3 && yPosition === yZombiePos && xPosition === xZombiePos + 1)  {
         gameOver();
     }
 
@@ -38,24 +37,45 @@ function checkGameOver(move) {
         countSteps();
         hunt();
         flee();
-        moveLeft();
+        move(direction);
         nextArea();
         zombieClose();
         catClose();
+        checkCatFound()
+        checkTooBad()
     }
 
 }
 
+//You and Zombie moved to the same spot
+function checkTooBad() {
+
+    if (xPosition === xZombiePos && yPosition === yZombiePos)  {
+        gameOver();
+    }
+}
+
 //Zombie killed you and the game ends
 function gameOver() {
+    countSteps();
+    nextArea();
+    zombieClose();
     document.getElementById("controls").style.visibility = 'hidden';
     document.getElementById("zombie").style.visibility = 'visible';
     document.getElementById("event").style.visibility = 'visible';
-    countSteps();
-    nextArea();
-
 }
 
+//Check if you found the cat
+function checkCatFound() {
 
+    if (xPosition === xCatPos && yPosition === yCatPos)  {
+        catFound();
+    }
+}
 
-
+//You found a cat
+function catFound() {
+    document.getElementById("controls").style.visibility = 'hidden';
+    document.getElementById("cat").style.visibility = 'visible';
+    document.getElementById("event").style.visibility = 'visible';
+}
