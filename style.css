@@ -2,26 +2,23 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-
-/* Prevents images from being marked or dragged */
-img { 
     user-select: none;
+
+    /* Prevents the game from being highlightable */
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
 
-/* Application size */
 
+/* Application size */
 body    {
     display: grid;
     margin: auto;
 }
 
 /* Menu */
-
 #game   {
     visibility: hidden; /* Hide the game while in the menu */
 }
@@ -230,6 +227,8 @@ main   {
 /* controller */
 #controls   {
     grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
     margin: auto;
     display: grid;
     padding: 5%;
@@ -238,7 +237,7 @@ main   {
 }
 
 #controls img {
-    width: 100%;
+    width: 90%;
 }
 
 #controls img:active    {
@@ -248,25 +247,55 @@ main   {
 #up {
     grid-column-start: 2;
     grid-row-start: 1;
+    justify-self: center;
 }
 
 #down   {
     grid-column-start: 2;
     grid-row-start: 3;
+    justify-self: center;
 }
 
 #left  {
     grid-column-start: 1;
     grid-row-start: 2;
+    justify-self: end;
 }
 
 #right {
     grid-column-start: 3;
     grid-row-start: 2;
+    justify-self: start;
+}
+
+#tryAgain   {
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: 2;
+    height: 100%;
+    visibility: hidden;
+    justify-self: center;
+}
+
+#rescueCat   {
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: 2;
+    height: 100%;
+    visibility: hidden;
+    justify-self: center;
+}
+
+#message    {
+    grid-column-start: 1;
+    grid-column-end: end;
+    grid-row-start: 1;
+    justify-self: center;
+    visibility: hidden;
+    text-align: center;
 }
 
 /* Animations */
-
 @keyframes pulse
 {
     0% {
