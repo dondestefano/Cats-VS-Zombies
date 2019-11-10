@@ -23,7 +23,7 @@ function flee() {
         var catDecision = Math.floor(Math.random() * 2 + 1);
 
         //ATTENTION Temporary section to test if the cat moves properly
-        document.getElementById("random").innerHTML = catDecision;
+
 
         if (catDecision === 1) {
 
@@ -103,6 +103,45 @@ function flee() {
     }
 }
 
-//Show the cat on the map if the cat is <2 steps away
 
-//Cat has been found and the game ends
+function catClose()  {
+    
+    //Show indicator if the cat is to the left
+        if (xPosition === xCatPos + 1 && yPosition === yCatPos) {
+            document.getElementById("catIndicator").style.visibility = 'visible';
+            document.getElementById("catIndicator").style.gridRowStart = '2';
+            document.getElementById("catIndicator").style.gridColumnStart = '1';
+            document.getElementById("catIndicator").src = "images/characters/catind_left.png";
+        }
+    
+    //Show indicator if the cat is to the right
+        else if (xPosition === xCatPos - 1 && yPosition === yCatPos) {
+            document.getElementById("catIndicator").style.visibility = 'visible';
+            document.getElementById("catIndicator").style.gridRowStart = '2';
+            document.getElementById("catIndicator").style.gridColumnStart = '5';
+            document.getElementById("catIndicator").src = "images/characters/catind_right.png";
+        }
+    
+    //Show indicator if the cat is ahead
+        else if (yPosition === yCatPos - 1 && xPosition === xCatPos) {
+            document.getElementById("catIndicator").style.visibility = 'visible';
+            document.getElementById("catIndicator").style.gridRowStart = '1';
+            document.getElementById("catIndicator").style.gridColumnStart = '3';
+            document.getElementById("catIndicator").src = "images/characters/catind_up.png";
+        }
+    
+    //Show indicator if the cat is behind
+        else if (yPosition === yCatPos + 1 && xPosition === xCatPos) {
+            document.getElementById("catIndicator").style.visibility = 'visible';
+            document.getElementById("catIndicator").style.gridRowStart = '4';
+            document.getElementById("catIndicator").style.gridColumnStart = '3';
+            document.getElementById("catIndicator").src = "images/characters/catind_down.png";
+        }
+    
+    //Remove the indicator when the cat isn't close
+        else    {
+            document.getElementById("catIndicator").style.visibility = 'hidden';
+        }
+    
+    
+    }

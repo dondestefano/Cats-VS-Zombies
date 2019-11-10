@@ -10,40 +10,41 @@
 
 <body>
 
+    <main id=menu>  
+        <img id=logo src="images/assets/cvzlogo.png">
+        <img id=playButton src="images/assets/playbtn.png" onclick=startGame();> 
+    </main>
+
     <main id=game>
         <nav id=screen>
+                <img id=cat src="images/characters/kitty.png">
+                <img id=zombie src="images/characters/zooombie.png">  
 
-                <img id=background src="">
-                
-                <figure id=zombieIndicator>
+                <figure id=event></figure>
+
+                <img id=zombieIndicator src="images/characters/zombieind_down.png">
+                <img id=catIndicator src="images/characters/catind_down.png">
+
+
+                <figure id=detail>                   
                 </figure>
 
-                <figur id=catIndicator>
-                </figur>
+                <figure id=anotherDetail>                   
+                </figure>
 
-                <figur id=detail>                   
-                </figur>
-
-                <figur id=anotherDetail>                   
-                </figur>
-                
-                <figur id=event>                   
-                    </figur>
-
-                <img id=cat src="images/characters/kitty.png">
-                <img id=zombie src="images/characters/zooombie.png">
+                <img id=background src="">
 
                 </nav>
 
         <content id=playerUI>
 
             <nav id=controls>
-                <img id=up src="images/controls/up.png" onclick="countSteps();hunt();flee();moveUp();nextArea();"/>
+                <img id=up src="images/controls/up.png" onclick=checkGameOver(1);>
                 <br><br>
-                <img id=left src="images/controls/left.png" onclick="countSteps();hunt();flee();moveLeft();nextArea();"/>
-                <img id=right src="images/controls/right.png" onclick="countSteps();hunt();flee();moveRight();nextArea();"/>
+                <img id=left src="images/controls/left.png" onclick=checkGameOver(3);>
+                <img id=right src="images/controls/right.png" onclick=checkGameOver(4);>
                 <br><br>
-                <img id=down src="images/controls/down.png" onclick="countSteps();hunt();flee();moveDown();nextArea();"/>
+                <img id=down src="images/controls/down.png" onclick=checkGameOver(2)>
             </nav>
 
             <aside id=playerData>
@@ -64,14 +65,14 @@
                         <output id=xAxisZombie></output>
                     </section>
         
-                    <section id=cat>
+                    <section id=catCounter>
                         Cat position:<br>
                         <output id=yAxisCat></output>
                         <output id=xAxisCat></output>
                     </section>
                 
                     <section id=random>
-                        Cat position:<br> 
+                        Cat random:<br> 
                         <output id=random></output>
                     </section>
         
@@ -79,11 +80,6 @@
             
         </content>   
 
-    </main>
-
-    <main id=menu>  
-        <img id=logo src="images/assets/cvzlogo.png">
-        <img id=playButton src="images/assets/playbtn.png" onclick=startGame();> 
     </main>
 
 </body>
