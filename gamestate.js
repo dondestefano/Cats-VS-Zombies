@@ -11,6 +11,7 @@ function startGame()    {
 
 }
 
+//Reset zombie-position, player-position, cat-position, steps counter, map lcations and restart the game
 function restart()  {
     document.getElementById("up").style.visibility = 'visible';
     document.getElementById("down").style.visibility = 'visible';
@@ -28,6 +29,7 @@ function restart()  {
     zombieClose();
 }
 
+//The cat was found and the player continues from the area where he/she found it
 function rescue()   {
     startingPositionCat();
     document.getElementById("up").style.visibility = 'visible';
@@ -40,7 +42,7 @@ function rescue()   {
     document.getElementById("message").style.visibility = 'hidden';
 }
 
-//Check if the zombie found you
+//Check if the zombie found you - if not move to the next area
 function checkGameOver(playerMoves) {
 
     var direction = playerMoves;
@@ -84,7 +86,7 @@ function checkTooBad() {
     }
 }
 
-//Zombie killed you and the game ends
+//Zombie found the player and hte game ends but the next area still loads and step still counts
 function gameOver() {
     countSteps();
     nextArea();

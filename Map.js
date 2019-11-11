@@ -23,6 +23,10 @@ function createMap() {
 
 }
 
+function fadeOut()  {
+    document.getElementById("event").style.animation= 'fadeout 2s forwards"';
+}
+
 //Get the value in the current position of the array
 function nextArea() {
     var mapArea = "";

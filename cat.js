@@ -22,9 +22,6 @@ function flee() {
         //Make a Random decision if the cat is going to move away on the x or the y axis
         var catDecision = Math.floor(Math.random() * 2 + 1);
 
-        //ATTENTION Temporary section to test if the cat moves properly
-
-
         if (catDecision === 1) {
 
             //Keep the cat from stepping out of the x-axis.
@@ -142,6 +139,4 @@ function catClose()  {
         else    {
             document.getElementById("catIndicator").style.visibility = 'hidden';
         }
-    
-    
     }
