@@ -31,10 +31,18 @@ function nextArea() {
         for (x = 0; x < mapForest[y].length; x++) {   
 
             if (y == yPosition && x == xPosition) { 
-                
-                mapArea = "images/areas/" + mapForest[y][x] + ".jpg"
 
-                document.getElementById("background").src = mapArea;
+                var currentArea = mapForest[y][x];
+
+                if (currentArea % 2 == 0) {
+                    document.getElementById("background").src = "images/areas/12.jpg";
+                    document.getElementById("detail").src = "images/areas/22.jpg";
+                }
+
+                else if (currentArea % 1 == 0) {
+                    document.getElementById("background").src = "images/areas/22.jpg";
+                    document.getElementById("anotherDetail").src = "images/areas/12.jpg";
+                }
             
             }
         }

@@ -92,6 +92,7 @@ main   {
     grid-template-rows: repeat(8, 12.5vh);
     margin: auto;
     background-color: black;
+    opacity: 0.8;
     visibility: hidden;
     object-fit: cover;
     display: grid;
@@ -99,7 +100,6 @@ main   {
     grid-column-end: end;
     grid-row-start: 1;
     grid-row-end: end;
-    opacity: 50%;
 }
 
 #zombie {
@@ -333,6 +333,7 @@ main   {
 
 @keyframes fadeout {
     0% { opacity: 1; }
-    99%   { opacity: 0; }
-    100%   { visibility: hidden; }
+    100%   { opacity: 0;
+            visibility: hidden;
+    }
 }

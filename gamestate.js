@@ -114,7 +114,7 @@ function catFound() {
     document.getElementById("right").style.visibility = 'hidden';
     document.getElementById("rescueCat").style.visibility = 'visible';
     document.getElementById("cat").style.visibility = 'visible';
-    document.getElementById("event").style.visibility = 'visible';
+    document.getElementById("event").style.visibility = 'visible'; 
     document.getElementById("yAxis").innerHTML = yPosition;
     document.getElementById("message").style.visibility = 'visible';
     document.getElementById("message").style.color = 'green';
