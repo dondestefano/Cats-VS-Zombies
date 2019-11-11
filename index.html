@@ -25,27 +25,25 @@
                 <img id=zombieIndicator src="images/characters/zombieind_down.png">
                 <img id=catIndicator src="images/characters/catind_down.png">
 
+                <figure id=detail></figure>
 
-                <figure id=detail>                   
-                </figure>
+                <figure id=anotherDetail></figure>
 
-                <figure id=anotherDetail>                   
-                </figure>
+        </nav>
 
-                <img id=background src="">
+        <nav id=playerUI>
 
-                </nav>
-
-        <content id=playerUI>
-
-            <nav id=controls>
+            <div id=controls>
+                <section id=message></section>
+                <img id=tryAgain src="images/assets/tryagainbtn.png" onclick=restart()>
+                <img id=rescueCat src="images/assets/okbtn.png" onclick=rescue()>
                 <img id=up src="images/controls/up.png" onclick=checkGameOver(1);>
                 <br><br>
                 <img id=left src="images/controls/left.png" onclick=checkGameOver(3);>
                 <img id=right src="images/controls/right.png" onclick=checkGameOver(4);>
                 <br><br>
                 <img id=down src="images/controls/down.png" onclick=checkGameOver(2)>
-            </nav>
+            </div>
 
             <aside id=playerData>
 
@@ -78,7 +76,7 @@
         
             </aside>
             
-        </content>   
+        </nav>   
 
     </main>
 

@@ -11,7 +11,38 @@ function startGame()    {
 
 }
 
-//Check if the zombie found you
+//Reset zombie-position, player-position, cat-position, steps counter, map lcations and restart the game
+function restart()  {
+    document.getElementById("up").style.visibility = 'visible';
+    document.getElementById("down").style.visibility = 'visible';
+    document.getElementById("left").style.visibility = 'visible';
+    document.getElementById("right").style.visibility = 'visible';
+    document.getElementById("tryAgain").style.visibility = 'hidden';
+    document.getElementById("zombie").style.visibility = 'hidden';
+    document.getElementById("event").style.visibility = 'hidden';
+    steps = 0;
+    createMap();
+    startingPosition();
+    startingPositionZombie();
+    startingPositionCat();
+    nextArea();
+    zombieClose();
+}
+
+//The cat was found and the player continues from the area where he/she found it
+function rescue()   {
+    startingPositionCat();
+    document.getElementById("up").style.visibility = 'visible';
+    document.getElementById("down").style.visibility = 'visible';
+    document.getElementById("left").style.visibility = 'visible';
+    document.getElementById("right").style.visibility = 'visible';
+    document.getElementById("rescueCat").style.visibility = 'hidden';
+    document.getElementById("cat").style.visibility = 'hidden';
+    document.getElementById("event").style.visibility = 'hidden';
+    document.getElementById("message").style.visibility = 'hidden';
+}
+
+//Check if the zombie found you - if not move to the next area
 function checkGameOver(playerMoves) {
 
     var direction = playerMoves;
@@ -55,12 +86,16 @@ function checkTooBad() {
     }
 }
 
-//Zombie killed you and the game ends
+//Zombie found the player and hte game ends but the next area still loads and step still counts
 function gameOver() {
     countSteps();
     nextArea();
     zombieClose();
-    document.getElementById("controls").style.visibility = 'hidden';
+    document.getElementById("up").style.visibility = 'hidden';
+    document.getElementById("down").style.visibility = 'hidden';
+    document.getElementById("left").style.visibility = 'hidden';
+    document.getElementById("right").style.visibility = 'hidden';
+    document.getElementById("tryAgain").style.visibility = 'visible';
     document.getElementById("zombie").style.visibility = 'visible';
     document.getElementById("event").style.visibility = 'visible';
 }
@@ -75,7 +110,15 @@ function checkCatFound() {
 
 //You found a cat
 function catFound() {
-    document.getElementById("controls").style.visibility = 'hidden';
+    document.getElementById("up").style.visibility = 'hidden';
+    document.getElementById("down").style.visibility = 'hidden';
+    document.getElementById("left").style.visibility = 'hidden';
+    document.getElementById("right").style.visibility = 'hidden';
+    document.getElementById("rescueCat").style.visibility = 'visible';
     document.getElementById("cat").style.visibility = 'visible';
-    document.getElementById("event").style.visibility = 'visible';
+    document.getElementById("event").style.visibility = 'visible'; 
+    document.getElementById("yAxis").innerHTML = yPosition;
+    document.getElementById("message").style.visibility = 'visible';
+    document.getElementById("message").style.color = 'green';
+    document.getElementById("message").innerHTML = "<p>You found mittens mofugga!</p>";
 }

@@ -14,7 +14,8 @@ function startingPosition() {
 
 }
 
-//Move the player
+//Move the player with the move-value determining direction
+//If the player has reached the end of the map, hide the button that would have them move outside the map
 function move(x)   {
 
     var moving = x;
@@ -106,7 +107,6 @@ function move(x)   {
 }
 
 //Keep track of how many steps the player has made
-
 function countSteps()   {
 
     steps += 1;

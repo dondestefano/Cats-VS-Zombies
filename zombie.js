@@ -83,7 +83,7 @@ function zombieClose()  {
     //Show indicator if the zombie is behind
         else if (yPosition === yZombiePos + 1 && xPosition === xZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
-            document.getElementById("zombieIndicator").style.gridRowStart = '4';
+            document.getElementById("zombieIndicator").style.gridRowStart = '5';
             document.getElementById("zombieIndicator").style.gridColumnStart = '3';
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_down.png";
         }
