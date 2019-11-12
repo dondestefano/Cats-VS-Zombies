@@ -24,7 +24,7 @@ function restart()  {
     document.getElementById("message").style.visibility = 'hidden';
     steps = 0;
     cats = 0;
-    createMap();
+    createMap()
     startingPosition();
     startingPositionZombie();
     startingPositionCat();

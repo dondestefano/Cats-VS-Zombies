@@ -1,9 +1,13 @@
-//Create a map
+//Public map
 var mapForest = [];
 
 //Randomize the values in each area of the map
 function createMap() {
 
+    //Reset the map on restart
+    mapForest = [];
+
+    //Create an area with a different number in each bracket
     for (y = 0; y < 7; y++) {
 
         var xPos = [];
