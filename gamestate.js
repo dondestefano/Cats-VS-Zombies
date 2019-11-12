@@ -21,6 +21,7 @@ function restart()  {
     document.getElementById("tryAgain").style.visibility = 'hidden';
     document.getElementById("zombie").style.visibility = 'hidden';
     document.getElementById("event").style.visibility = 'hidden';
+    document.getElementById("message").style.visibility = 'hidden';
     steps = 0;
     cats = 0;
     createMap();
@@ -53,19 +54,19 @@ function checkGameOver(playerMoves) {
     var direction = playerMoves;
     document.getElementById("random").innerHTML = direction;
 
-    if (direction === 1 && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
+    if (direction == up && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
         gameOver();
     }
 
-    else if (direction === 2 && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
+    else if (direction == down && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
         gameOver();
     }
 
-    else if (direction === 4 && yPosition === yZombiePos && xPosition === xZombiePos - 1)  {
+    else if (direction == right && yPosition === yZombiePos && xPosition === xZombiePos - 1)  {
         gameOver();
     }
             
-    else if (direction === 3 && yPosition === yZombiePos && xPosition === xZombiePos + 1)  {
+    else if (direction == left && yPosition === yZombiePos && xPosition === xZombiePos + 1)  {
         gameOver();
     }
 
@@ -103,6 +104,9 @@ function gameOver() {
     document.getElementById("tryAgain").style.visibility = 'visible';
     document.getElementById("zombie").style.visibility = 'visible';
     document.getElementById("event").style.visibility = 'visible';
+    document.getElementById("message").style.visibility = 'visible';
+    document.getElementById("message").style.color = 'red';
+    document.getElementById("message").innerHTML = "<p>You died...</p>";
 }
 
 //Check if you found the cat
