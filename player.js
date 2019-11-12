@@ -2,6 +2,7 @@
 var yPosition = 0;
 var xPosition = 0;
 var steps = 0;
+var cats = 0;
 
 //Starting position
 function startingPosition() {
@@ -11,6 +12,7 @@ function startingPosition() {
     document.getElementById("yAxis").innerHTML = yPosition;
     document.getElementById("xAxis").innerHTML = xPosition;
     document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
+    document.getElementById("catsFound").innerHTML = "Cats found: " + cats;
 
 }
 
@@ -20,7 +22,7 @@ function move(x)   {
 
     var moving = x;
 
-    if (moving === 1)   {
+    if (moving == up)   {
 
         if (yPosition == 0) {
             yPosition += 1;
@@ -42,7 +44,7 @@ function move(x)   {
 
     }
 
-    else if (moving === 2) {
+    else if (moving == down) {
 
         if (yPosition == 6) {
             yPosition -= 1;
@@ -63,7 +65,7 @@ function move(x)   {
     
     }
     
-    else if (moving === 3) {
+    else if (moving == left) {
 
         if (xPosition == 6) {
             xPosition -= 1;
@@ -84,7 +86,7 @@ function move(x)   {
 
     }
 
-    else if (moving === 4) {
+    else if (moving == right) {
 
         if (xPosition == 0) {
             xPosition += 1;

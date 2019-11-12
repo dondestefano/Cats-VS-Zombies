@@ -6,6 +6,7 @@ function startGame()    {
     startingPositionCat();
     nextArea();
     zombieClose();
+    catClose();
     document.getElementById("game").style.visibility = 'visible';
     document.getElementById("menu").style.animation = 'fadeout 2s forwards';
 
@@ -21,16 +22,20 @@ function restart()  {
     document.getElementById("zombie").style.visibility = 'hidden';
     document.getElementById("event").style.visibility = 'hidden';
     steps = 0;
+    cats = 0;
     createMap();
     startingPosition();
     startingPositionZombie();
     startingPositionCat();
     nextArea();
     zombieClose();
+    catClose();
 }
 
 //The cat was found and the player continues from the area where he/she found it
 function rescue()   {
+    cats += 1;
+    document.getElementById("catsFound").innerHTML = "Cats found: " + cats;
     startingPositionCat();
     document.getElementById("up").style.visibility = 'visible';
     document.getElementById("down").style.visibility = 'visible';
