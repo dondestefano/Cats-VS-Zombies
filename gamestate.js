@@ -5,6 +5,7 @@ function startGame()    {
     startingPositionZombie();
     startingPositionCat();
     nextArea();
+    drawMap()
     zombieClose();
     catClose();
     document.getElementById("game").style.visibility = 'visible';
@@ -25,6 +26,7 @@ function restart()  {
     steps = 0;
     cats = 0;
     createMap()
+    drawMap()
     startingPosition();
     startingPositionZombie();
     startingPositionCat();
@@ -39,11 +41,11 @@ function checkGameOver(playerMoves) {
 
     var direction = playerMoves;
 
-    if (direction == up && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
+    if (direction == up && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
         gameOver();
     }
 
-    else if (direction == down && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
+    else if (direction == down && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
         gameOver();
     }
 
@@ -61,6 +63,7 @@ function checkGameOver(playerMoves) {
         flee();
         move(direction);
         nextArea();
+        drawMap()
         zombieClose();
         catClose();
         checkCatFound()
@@ -83,6 +86,7 @@ function gameOver() {
     countSteps();
     nextArea();
     zombieClose();
+    drawMap()
     //Hide controls and show the restart option
     document.getElementById("up").style.visibility = 'hidden';
     document.getElementById("down").style.visibility = 'hidden';

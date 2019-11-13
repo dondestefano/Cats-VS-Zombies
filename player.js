@@ -20,11 +20,11 @@ function move(x)   {
 
     var moving = x;
 
-    if (moving == up)   {
+    if (moving == down)   {
 
         if (yPosition == 0) {
             yPosition += 1;
-            document.getElementById("down").style.visibility = 'visible';
+            document.getElementById("up").style.visibility = 'visible';
         }
     
         else if (yPosition < 5) {
@@ -33,17 +33,17 @@ function move(x)   {
     
         else if (yPosition == 5) {
             yPosition += 1;
-            document.getElementById("up").style.visibility = 'hidden';
+            document.getElementById("down").style.visibility = 'hidden';
         }
 
 
     }
 
-    else if (moving == down) {
+    else if (moving == up) {
 
         if (yPosition == 6) {
             yPosition -= 1;
-            document.getElementById("up").style.visibility = 'visible';
+            document.getElementById("down").style.visibility = 'visible';
         }
         
         else if (yPosition > 1) {
@@ -52,7 +52,7 @@ function move(x)   {
     
         else if (yPosition == 1) {
             yPosition -= 1;
-            document.getElementById("down").style.visibility = 'hidden';
+            document.getElementById("up").style.visibility = 'hidden';
         }
     
     }

@@ -27,6 +27,20 @@ function createMap() {
 
 }
 
+function drawMap() {
+    var mapArea = "";
+    for (y = 0; y < mapForest.length; y++) {
+        for (x = 0; x < mapForest[y].length; x++) {
+            if (y === yPosition && x === xPosition) { mapArea += "&#9723; " } // &#9734;
+            else {
+                mapArea += "&#9724; "
+            }
+        }
+        mapArea += "<br>"
+    }
+    document.getElementById("map").innerHTML = mapArea;
+}
+
 function fadeOut()  {
     document.getElementById("event").style.animation= 'fadeout 2s forwards"';
 }
@@ -72,23 +86,23 @@ function nextArea() {
                     }
 
                     else if (currentArea >= 42 && currentArea < 49) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail2.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }  
 
                     else if (currentArea >= 56 && currentArea < 63) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail1.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
                     else if (currentArea >= 63 && currentArea < 70) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
                     else if (currentArea >= 70 && currentArea < 77) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail1.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
                     else if (currentArea >= 84 && currentArea < 91) {
@@ -102,13 +116,13 @@ function nextArea() {
                     }
                     
                     else if (currentArea >= 97 && currentArea < 100) {
-                        document.getElementById("detail").style.backgroundImage = 'none';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
                     }
                     
                     else if (currentArea === 100) {
-                        document.getElementById("detail").style.backgroundImage = 'none';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }  
 
                 }
@@ -136,32 +150,32 @@ function nextArea() {
                     }  
 
                     else if (currentArea >= 35 && currentArea < 42) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail2.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail1.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
 
                     else if (currentArea >= 42 && currentArea < 49) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail2.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }  
 
                     else if (currentArea >= 56 && currentArea < 63) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail2.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
                     
                     else if (currentArea >= 63 && currentArea < 70) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
                     
                     else if (currentArea >= 70 && currentArea < 77) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("detail").style.backgroundImage = 'none';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
                     
                     else if (currentArea >= 84 && currentArea < 91) {
-                        document.getElementById("detail").style.backgroundImage = 'none';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
 
@@ -210,17 +224,17 @@ function nextArea() {
                     }
 
                     else if (currentArea >= 42 && currentArea < 49) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail2.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }  
 
                     else if (currentArea >= 56 && currentArea < 63) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail1.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
                     else if (currentArea >= 63 && currentArea < 70) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
                     
@@ -235,7 +249,7 @@ function nextArea() {
                     }
 
                     else if (currentArea >= 91 && currentArea < 97) {
-                        document.getElementById("detail").style.backgroundImage = 'none';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
@@ -266,7 +280,7 @@ function nextArea() {
                     }
                     
                     else if (currentArea >= 21 && currentArea < 28) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
@@ -281,27 +295,27 @@ function nextArea() {
                     }
 
                     else if (currentArea >= 42 && currentArea < 49) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
                     }  
 
                     else if (currentArea >= 56 && currentArea < 63) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail1.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
                     else if (currentArea >= 63 && currentArea < 70) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail2.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
                     }
                     
                     else if (currentArea >= 70 && currentArea < 77) {
-                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
+                        document.getElementById("detail").style.backgroundImage = 'd';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
                     }
                     
                     else if (currentArea >= 84 && currentArea < 91) {
-                        document.getElementById("detail").style.backgroundImage = 'none';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail4.png)';
                         document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
 
@@ -316,8 +330,8 @@ function nextArea() {
                     }
                     
                     else if (currentArea === 100) {
-                        document.getElementById("detail").style.backgroundImage = 'none';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
+                        document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }  
 
                 }  

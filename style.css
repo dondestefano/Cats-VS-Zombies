@@ -77,6 +77,24 @@ main   {
     background-size: cover;
 }
 
+#map    {
+    z-index: 25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background-color: rgb(68, 68, 68);
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 8px;
+    border-style: solid;
+    border-color: black;
+    color: red;
+}
+
 /* Pop-ups */
 #event {
     z-index: 1000;
@@ -221,30 +239,6 @@ main   {
     line-height: 60px;
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
-}
-
-#oldPlayerData   {
-    visibility: hidden;
-}
-
-#map    { 
-    color: white;
-}
-
-
-#stepCounter    {
-    color: blue;
-
-}
-
-#zombieCounter    {  
-    width: 200px;
-    height: 30px;  
-    color: red;
-}
-
-#catCounter    { 
-    color: green;
 }
 
 /* controller */
