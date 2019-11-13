@@ -27,6 +27,20 @@ function createMap() {
 
 }
 
+function drawMap() {
+    var mapArea = "";
+    for (y = 0; y < mapForest.length; y++) {
+        for (x = 0; x < mapForest[y].length; x++) {
+            if (y === yPosition && x === xPosition) { mapArea += "&#9723; " } // &#9734;
+            else {
+                mapArea += "&#9724; "
+            }
+        }
+        mapArea += "<br>"
+    }
+    document.getElementById("map").innerHTML = mapArea;
+}
+
 function fadeOut()  {
     document.getElementById("event").style.animation= 'fadeout 2s forwards"';
 }
