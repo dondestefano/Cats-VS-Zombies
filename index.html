@@ -6,6 +6,8 @@
     <script type="text/javascript" src="cat.js"></script>
     <script type="text/javascript" src="map.js"></script>
     <script type="text/javascript" src="gamestate.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower|Yeon+Sung&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,6 +19,7 @@
 
     <main id=game>
         <nav id=screen>
+                <output id=message></output>
                 <img id=cat src="images/characters/kitty.png">
                 <img id=zombie src="images/characters/zooombie.png">  
 
@@ -32,50 +35,23 @@
         </nav>
 
         <nav id=playerUI>
-
+            <div id=playerData>
+                <div class=flex-container>
+                    <output id=numberOfSteps></output>
+                    <output id=catsFound></output>
+                </div>
+            </div>
+            
             <div id=controls>
-                <section id=message></section>
                 <img id=tryAgain src="images/assets/tryagainbtn.png" onclick=restart()>
                 <img id=rescueCat src="images/assets/okbtn.png" onclick=rescue()>
-                <img id=up src="images/controls/up.png" onclick=checkGameOver(1);>
+                <img id=up src="images/controls/up.png" onclick=checkGameOver(up);>
                 <br><br>
-                <img id=left src="images/controls/left.png" onclick=checkGameOver(3);>
-                <img id=right src="images/controls/right.png" onclick=checkGameOver(4);>
+                <img id=left src="images/controls/left.png" onclick=checkGameOver(left);>
+                <img id=right src="images/controls/right.png" onclick=checkGameOver(right);>
                 <br><br>
-                <img id=down src="images/controls/down.png" onclick=checkGameOver(2)>
-            </div>
-
-            <aside id=playerData>
-
-                    <section id=map>
-                        Player position:<br> 
-                        <output id=yAxis></output>
-                        <output id=xAxis></output>
-                    </section>
-            
-                    <section id=stepCounter>
-                        <output id=numberOfSteps></output>
-                    </section>
-        
-                    <section id=zombieCounter>
-                        Zombie Position:<br>
-                        <output id=yAxisZombie></output>
-                        <output id=xAxisZombie></output>
-                    </section>
-        
-                    <section id=catCounter>
-                        Cat position:<br>
-                        <output id=yAxisCat></output>
-                        <output id=xAxisCat></output>
-                    </section>
-                
-                    <section id=random>
-                        Cat random:<br> 
-                        <output id=random></output>
-                    </section>
-        
-            </aside>
-            
+                <img id=down src="images/controls/down.png" onclick=checkGameOver(down)>
+            </div>           
         </nav>   
 
     </main>

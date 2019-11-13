@@ -6,10 +6,7 @@ var xZombiePos = 0;
 function startingPositionZombie()   {
 
     yZombiePos = Math.floor(Math.random() * 7);
-    document.getElementById("yAxisZombie").innerHTML = yZombiePos;
-
     xZombiePos = Math.floor(Math.random() * 7);;
-    document.getElementById("xAxisZombie").innerHTML = xZombiePos;
 }
 
 //Move the zombie towards player
@@ -17,9 +14,8 @@ function hunt() {
 
     //Do nothing every fourth step
     if (steps % 4 == 0)    {
-        document.getElementById("xAxisZombie").innerHTML = xZombiePos;
-        document.getElementById("yAxisZombie").innerHTML = yZombiePos;
-
+        yZombiePos += 0;
+        xZombiePos += 0;
     }
 
     //Make the Zombie match the x-axis before trying to match the players y-axis
@@ -27,12 +23,10 @@ function hunt() {
 
         if (xZombiePos < xPosition) {
         xZombiePos += 1;
-        document.getElementById("xAxisZombie").innerHTML = xZombiePos;
         }
 
         else if (xZombiePos > xPosition) {
         xZombiePos -= 1;
-        document.getElementById("xAxisZombie").innerHTML = xZombiePos;
         }
     }
 
@@ -41,12 +35,10 @@ function hunt() {
 
         if (yZombiePos < yPosition) {
         yZombiePos += 1;
-        document.getElementById("yAxisZombie").innerHTML = yZombiePos;
         }
 
         else if (yZombiePos > yPosition) {
         yZombiePos -= 1;
-        document.getElementById("yAxisZombie").innerHTML = yZombiePos;
         }
     }
     
@@ -59,7 +51,7 @@ function zombieClose()  {
     //Show indicator if the zombie is to the left
         if (xPosition === xZombiePos + 1 && yPosition === yZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
-            document.getElementById("zombieIndicator").style.gridRowStart = '2';
+            document.getElementById("zombieIndicator").style.gridRowStart = '4';
             document.getElementById("zombieIndicator").style.gridColumnStart = '1';
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_left.png";
         }
@@ -67,7 +59,7 @@ function zombieClose()  {
     //Show indicator if the zombie is to the right
         else if (xPosition === xZombiePos - 1 && yPosition === yZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
-            document.getElementById("zombieIndicator").style.gridRowStart = '2';
+            document.getElementById("zombieIndicator").style.gridRowStart = '4';
             document.getElementById("zombieIndicator").style.gridColumnStart = '5';
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_right.png";
         }
