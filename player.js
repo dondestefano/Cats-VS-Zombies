@@ -7,8 +7,8 @@ var cats = 0;
 //Starting position
 function startingPosition() {
 
-    yPosition = 2;
-    xPosition = 2;
+    yPosition = Math.floor(Math.random() * 7);
+    xPosition = Math.floor(Math.random() * 7);
     document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
     document.getElementById("catsFound").innerHTML = "Cats found: " + cats;
 

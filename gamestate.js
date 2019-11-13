@@ -26,10 +26,10 @@ function restart()  {
     steps = 0;
     cats = 0;
     createMap()
-    drawMap()
     startingPosition();
     startingPositionZombie();
     startingPositionCat();
+    drawMap()
     nextArea();
     zombieClose();
     catClose();
