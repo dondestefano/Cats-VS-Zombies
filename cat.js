@@ -7,10 +7,7 @@ var xCatPos = 0;
 function startingPositionCat()   {
 
     yCatPos = Math.floor(Math.random() * 7);
-    document.getElementById("yAxisCat").innerHTML = yCatPos;
-
     xCatPos = Math.floor(Math.random() * 7);
-    document.getElementById("xAxisCat").innerHTML = xCatPos;
 
 }
 
@@ -28,32 +25,28 @@ function flee() {
             if (xCatPos === 6) {
 
                 xCatPos -= 1;
-                document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
             else if (xCatPos === 0) {
 
                 xCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = xCatPos;
             }
 
             else if (xCatPos === xPosition) {
 
                 xCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = xCatPos;
+
             }
 
             else if (xCatPos > xPosition) {
 
                 xCatPos += 1;
-                document.getElementById("xAxisCat").innerHTML = xCatPos;
 
             }
 
             else if (xCatPos < xPosition) {
 
                 xCatPos -= 1;
-                document.getElementById("xAxisCat").innerHTML = xCatPos;
     
             }
 
@@ -65,33 +58,29 @@ function flee() {
             if (yCatPos === 6) {
 
                 yCatPos -= 1;
-                document.getElementById("yAxisCat").innerHTML = yCatPos;
             
                 }
 
             else if (yCatPos === 0) {
 
                 yCatPos += 1;
-                document.getElementById("yAxisCat").innerHTML = yCatPos;
                 }
             
             else if (yCatPos === yPosition) {
 
                 yCatPos += 1;
-                document.getElementById("yAxisCat").innerHTML = yCatPos;
+
                 }            
 
             else if (yCatPos > yPosition) {
 
                 yCatPos += 1;
-                document.getElementById("yAxisCat").innerHTML = yCatPos;
 
                 }
 
             else if (yCatPos < yPosition) {
 
                 yCatPos -= 1;
-                document.getElementById("yAxisCat").innerHTML = yCatPos;
     
                 }
 
@@ -106,7 +95,7 @@ function catClose()  {
     //Show indicator if the cat is to the left
         if (xPosition === xCatPos + 1 && yPosition === yCatPos) {
             document.getElementById("catIndicator").style.visibility = 'visible';
-            document.getElementById("catIndicator").style.gridRowStart = '2';
+            document.getElementById("catIndicator").style.gridRowStart = '3';
             document.getElementById("catIndicator").style.gridColumnStart = '1';
             document.getElementById("catIndicator").src = "images/characters/catind_left.png";
         }
@@ -114,7 +103,7 @@ function catClose()  {
     //Show indicator if the cat is to the right
         else if (xPosition === xCatPos - 1 && yPosition === yCatPos) {
             document.getElementById("catIndicator").style.visibility = 'visible';
-            document.getElementById("catIndicator").style.gridRowStart = '2';
+            document.getElementById("catIndicator").style.gridRowStart = '3';
             document.getElementById("catIndicator").style.gridColumnStart = '5';
             document.getElementById("catIndicator").src = "images/characters/catind_right.png";
         }

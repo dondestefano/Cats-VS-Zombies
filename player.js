@@ -9,8 +9,6 @@ function startingPosition() {
 
     yPosition = 2;
     xPosition = 2;
-    document.getElementById("yAxis").innerHTML = yPosition;
-    document.getElementById("xAxis").innerHTML = xPosition;
     document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
     document.getElementById("catsFound").innerHTML = "Cats found: " + cats;
 
@@ -26,18 +24,15 @@ function move(x)   {
 
         if (yPosition == 0) {
             yPosition += 1;
-            document.getElementById("yAxis").innerHTML = yPosition;
             document.getElementById("down").style.visibility = 'visible';
         }
     
         else if (yPosition < 5) {
             yPosition += 1;
-            document.getElementById("yAxis").innerHTML = yPosition;
         }
     
         else if (yPosition == 5) {
             yPosition += 1;
-            document.getElementById("yAxis").innerHTML = yPosition;
             document.getElementById("up").style.visibility = 'hidden';
         }
 
@@ -48,18 +43,15 @@ function move(x)   {
 
         if (yPosition == 6) {
             yPosition -= 1;
-            document.getElementById("yAxis").innerHTML = yPosition;
             document.getElementById("up").style.visibility = 'visible';
         }
         
         else if (yPosition > 1) {
             yPosition -= 1;
-            document.getElementById("yAxis").innerHTML = yPosition;
         }
     
         else if (yPosition == 1) {
             yPosition -= 1;
-            document.getElementById("yAxis").innerHTML = yPosition;
             document.getElementById("down").style.visibility = 'hidden';
         }
     
@@ -69,18 +61,15 @@ function move(x)   {
 
         if (xPosition == 6) {
             xPosition -= 1;
-            document.getElementById("xAxis").innerHTML = xPosition;
             document.getElementById("right").style.visibility = 'visible';
         }
     
         else if (xPosition > 1) {
             xPosition -= 1;
-            document.getElementById("xAxis").innerHTML = xPosition;
         }
     
         else if (xPosition == 1) {
             xPosition -= 1;
-            document.getElementById("xAxis").innerHTML = xPosition;
             document.getElementById("left").style.visibility = 'hidden';
         }
 
@@ -90,18 +79,15 @@ function move(x)   {
 
         if (xPosition == 0) {
             xPosition += 1;
-            document.getElementById("xAxis").innerHTML = xPosition;
             document.getElementById("left").style.visibility = 'visible';
         }
     
         else if (xPosition < 5) {
             xPosition += 1;
-            document.getElementById("xAxis").innerHTML = xPosition;
         }
     
         else if (xPosition == 5) {
             xPosition += 1;
-            document.getElementById("xAxis").innerHTML = xPosition;
             document.getElementById("right").style.visibility = 'hidden';
         }
 
