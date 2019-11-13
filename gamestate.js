@@ -41,11 +41,11 @@ function checkGameOver(playerMoves) {
 
     var direction = playerMoves;
 
-    if (direction == up && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
+    if (direction == up && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
         gameOver();
     }
 
-    else if (direction == down && xPosition === xZombiePos && yPosition === yZombiePos + 1)  {
+    else if (direction == down && xPosition === xZombiePos && yPosition === yZombiePos - 1)  {
         gameOver();
     }
 

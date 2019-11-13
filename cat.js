@@ -109,7 +109,7 @@ function catClose()  {
         }
     
     //Show indicator if the cat is ahead
-        else if (yPosition === yCatPos - 1 && xPosition === xCatPos) {
+        else if (yPosition === yCatPos + 1 && xPosition === xCatPos) {
             document.getElementById("catIndicator").style.visibility = 'visible';
             document.getElementById("catIndicator").style.gridRowStart = '1';
             document.getElementById("catIndicator").style.gridColumnStart = '3';
@@ -117,7 +117,7 @@ function catClose()  {
         }
     
     //Show indicator if the cat is behind
-        else if (yPosition === yCatPos + 1 && xPosition === xCatPos) {
+        else if (yPosition === yCatPos - 1 && xPosition === xCatPos) {
             document.getElementById("catIndicator").style.visibility = 'visible';
             document.getElementById("catIndicator").style.gridRowStart = '5';
             document.getElementById("catIndicator").style.gridColumnStart = '3';

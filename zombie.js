@@ -65,7 +65,7 @@ function zombieClose()  {
         }
     
     //Show indicator if the zombie is ahead
-        else if (yPosition === yZombiePos - 1 && xPosition === xZombiePos) {
+        else if (yPosition === yZombiePos + 1 && xPosition === xZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
             document.getElementById("zombieIndicator").style.gridRowStart = '1';
             document.getElementById("zombieIndicator").style.gridColumnStart = '3';
@@ -73,7 +73,7 @@ function zombieClose()  {
         }
     
     //Show indicator if the zombie is behind
-        else if (yPosition === yZombiePos + 1 && xPosition === xZombiePos) {
+        else if (yPosition === yZombiePos - 1 && xPosition === xZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
             document.getElementById("zombieIndicator").style.gridRowStart = '5';
             document.getElementById("zombieIndicator").style.gridColumnStart = '3';
