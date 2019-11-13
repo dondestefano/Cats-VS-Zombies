@@ -153,4 +153,41 @@ function rescue()   {
     document.getElementById("cat").style.visibility = 'hidden';
     document.getElementById("event").style.visibility = 'hidden';
     document.getElementById("message").style.visibility = 'hidden';
+
+    //Hide the movement button if the player starts at the edge of the map
+    if  (yPosition == 0 && xPosition == 0)    {
+        document.getElementById("up").style.visibility = 'hidden';
+        document.getElementById("left").style.visibility = 'hidden';
+    }
+
+     else if  (yPosition == 0 && xPosition == 6)    {
+        document.getElementById("up").style.visibility = 'hidden';
+         document.getElementById("right").style.visibility = 'hidden';
+    }
+
+    else if  (yPosition == 6 && xPosition == 6)    {
+        document.getElementById("down").style.visibility = 'hidden';
+        document.getElementById("right").style.visibility = 'hidden';
+    }
+
+    else if  (yPosition == 6 && xPosition == 0)    {
+        document.getElementById("down").style.visibility = 'hidden';
+        document.getElementById("left").style.visibility = 'hidden';
+    }
+
+    else if  (yPosition == 0)    {
+        document.getElementById("up").style.visibility = 'hidden';
+    }
+
+    else if  (xPosition == 0)    {
+        document.getElementById("left").style.visibility = 'hidden';
+    }
+
+    else if  (xPosition == 6)    {
+        document.getElementById("right").style.visibility = 'hidden';
+    }
+
+    else if  (yPosition == 6)    {
+            document.getElementById("down").style.visibility = 'hidden';
+    }
 }

@@ -12,6 +12,43 @@ function startingPosition() {
     document.getElementById("numberOfSteps").innerHTML = "Steps: " + steps;
     document.getElementById("catsFound").innerHTML = "Cats found: " + cats;
 
+        //Hide the movement button if the player starts at the edge of the map
+        if  (yPosition == 0 && xPosition == 0)    {
+        document.getElementById("up").style.visibility = 'hidden';
+        document.getElementById("left").style.visibility = 'hidden';
+        }
+
+        else if  (yPosition == 0 && xPosition == 6)    {
+            document.getElementById("up").style.visibility = 'hidden';
+            document.getElementById("right").style.visibility = 'hidden';
+        }
+
+        else if  (yPosition == 6 && xPosition == 6)    {
+            document.getElementById("down").style.visibility = 'hidden';
+            document.getElementById("right").style.visibility = 'hidden';
+        }
+
+        else if  (yPosition == 6 && xPosition == 0)    {
+            document.getElementById("down").style.visibility = 'hidden';
+            document.getElementById("left").style.visibility = 'hidden';
+        }
+
+        else if  (yPosition == 0)    {
+            document.getElementById("up").style.visibility = 'hidden';
+        }
+
+        else if  (xPosition == 0)    {
+            document.getElementById("left").style.visibility = 'hidden';
+        }
+
+        else if  (xPosition == 6)    {
+            document.getElementById("right").style.visibility = 'hidden';
+        }
+
+        else if  (yPosition == 6)    {
+            document.getElementById("down").style.visibility = 'hidden';
+        }
+
 }
 
 //Move the player with the move-value determining direction
