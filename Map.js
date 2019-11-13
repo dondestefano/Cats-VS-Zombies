@@ -72,7 +72,7 @@ function nextArea() {
                     
                     else if (currentArea >= 21 && currentArea < 28) {
                         document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
                     
                     else if (currentArea >= 28 && currentArea < 35) {
@@ -122,7 +122,7 @@ function nextArea() {
                     
                     else if (currentArea === 100) {
                         document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail1.png)';
                     }  
 
                 }
@@ -141,7 +141,7 @@ function nextArea() {
                     
                     else if (currentArea >= 21 && currentArea < 28) {
                         document.getElementById("detail").style.backgroundImage = 'url(images/areas/detail3.png)';
-                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail3.png)';
+                        document.getElementById("anotherDetail").style.backgroundImage = 'url(images/areas/anotherdetail2.png)';
                     }
                     
                     else if (currentArea >= 28 && currentArea < 35) {
