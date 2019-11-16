@@ -1,24 +1,24 @@
-//Global Zombie-position
+//Global Zombie-position.
 var yZombiePos = 0;
 var xZombiePos = 0;
 
-//Place the zombie on the map
+//Place the zombie on the map.
 function startingPositionZombie()   {
 
     yZombiePos = Math.floor(Math.random() * 7);
     xZombiePos = Math.floor(Math.random() * 7);;
 }
 
-//Move the zombie towards player
+//Move the zombie towards player.
 function hunt() {
 
-    //Do nothing every fourth step
+    //Do nothing every fourth step.
     if (steps % 4 == 0)    {
         yZombiePos += 0;
         xZombiePos += 0;
     }
 
-    //Make the Zombie match the x-axis before trying to match the players y-axis
+    //Make the Zombie match the x-axis before trying to match the player's y-axis.
     else if (xZombiePos !== xPosition)   {
 
         if (xZombiePos < xPosition) {
@@ -45,10 +45,10 @@ function hunt() {
 
 }
 
-//Show the Zombie indicator when the Zombie is 1 step away
+//Show the Zombie indicator when the Zombie is 1 step away.
 function zombieClose()  {
     
-    //Show indicator if the zombie is to the left
+    //Show indicator if the zombie is to the left.
         if (xPosition === xZombiePos + 1 && yPosition === yZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
             document.getElementById("zombieIndicator").style.gridRowStart = '4';
@@ -56,7 +56,7 @@ function zombieClose()  {
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_left.png";
         }
     
-    //Show indicator if the zombie is to the right
+    //Show indicator if the zombie is to the right.
         else if (xPosition === xZombiePos - 1 && yPosition === yZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
             document.getElementById("zombieIndicator").style.gridRowStart = '4';
@@ -64,7 +64,7 @@ function zombieClose()  {
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_right.png";
         }
     
-    //Show indicator if the zombie is ahead
+    //Show indicator if the zombie is ahead.
         else if (yPosition === yZombiePos + 1 && xPosition === xZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
             document.getElementById("zombieIndicator").style.gridRowStart = '1';
@@ -72,7 +72,7 @@ function zombieClose()  {
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_up.png";
         }
     
-    //Show indicator if the zombie is behind
+    //Show indicator if the zombie is behind.
         else if (yPosition === yZombiePos - 1 && xPosition === xZombiePos) {
             document.getElementById("zombieIndicator").style.visibility = 'visible';
             document.getElementById("zombieIndicator").style.gridRowStart = '5';
@@ -80,7 +80,7 @@ function zombieClose()  {
             document.getElementById("zombieIndicator").src = "images/characters/zombieind_down.png";
         }
     
-    //Remove the indicator when the Zombie isn't close
+    //Remove the indicator when the Zombie isn't close.
         else    {
             document.getElementById("zombieIndicator").style.visibility = 'hidden';
         }

@@ -1,13 +1,13 @@
-//Public map
+//Public map.
 var mapForest = [];
 
-//Randomize the values in each area of the map
+//Randomize the values in each area of the map.
 function createMap() {
 
-    //Reset the map on restart
+    //Reset the map on restart.
     mapForest = [];
 
-    //Create an area with a different number in each bracket
+    //Create an area with a different number in each bracket.
     for (y = 0; y < 7; y++) {
 
         var xPos = [];
@@ -27,25 +27,25 @@ function createMap() {
 
 }
 
+//Show a visual representation of the map.
 function drawMap() {
     var mapArea = "";
     for (y = 0; y < mapForest.length; y++) {
         for (x = 0; x < mapForest[y].length; x++) {
-            if (y === yPosition && x === xPosition) { mapArea += "&#9723; " } // &#9734;
+            if (y === yPosition && x === xPosition) { mapArea += "&#9723; " } //Show a symbol on the players location
             else {
+
+                //Show a symbol that represents each area.
                 mapArea += "&#9724; "
             }
         }
         mapArea += "<br>"
     }
+
     document.getElementById("map").innerHTML = mapArea;
 }
 
-function fadeOut()  {
-    document.getElementById("event").style.animation= 'fadeout 2s forwards"';
-}
-
-//Get the value in the current position of the array
+//When the player moves - Go through the aray to find the position the player is moving towards.
 function nextArea() {
     var mapArea = "";
     for (y = 0; y < mapForest.length; y++) {
@@ -54,9 +54,10 @@ function nextArea() {
 
             if (y == yPosition && x == xPosition) { 
 
-                //Rules to determine what the are looks like and make sure it stays the same way the entire game
+                //Set the value of the array's bracket as the current area.
                 var currentArea = mapForest[y][x];
 
+                //Use the value to determine what the area looks like (background, detail and another detail).
                 if (currentArea % 2 == 0 && currentArea % 3 == 0) {
                     document.getElementById("screen").style.backgroundImage = 'url(images/areas/12.png)';
                     

@@ -11,6 +11,7 @@
     -ms-user-select: none;
 }
 
+
 /* Application size */
 body    {
     display: grid;
@@ -18,6 +19,7 @@ body    {
     justify-content: center;
     overflow: hidden;
 }
+
 
 /* Menu */
 #game   {
@@ -49,6 +51,7 @@ body    {
 #playButton:active    {
     transform: scale(0.95);
 }
+
 
 /* Game Screen */
 main   {
@@ -94,6 +97,7 @@ main   {
     border-color: black;
     color: red;
 }
+
 
 /* Pop-ups */
 #event {
@@ -194,6 +198,7 @@ main   {
     visibility: hidden;
 }
 
+
 /* Player user interface */
 #playerUI   {
     z-index: 1000;
@@ -240,6 +245,7 @@ main   {
     font-size: 28px;
     font-family: 'Amatic SC', cursive;
 }
+
 
 /* controller */
 #controls   {
@@ -315,7 +321,6 @@ main   {
 }
 
 
-
 /* Animations */
 @keyframes pulse
 {
@@ -338,20 +343,6 @@ main   {
         transform: scale(0.8);
     }
 }
-
-@keyframes glowing {
-    0% { 
-        box-shadow: 0 0 -10px #92d453a6; 
-    }
-    40% { 
-        box-shadow: 0 0 20px #92d453a6; 
-    }
-    60% { 
-        box-shadow: 0 0 20px #92d453a6; 
-    }
-    100% { 
-        box-shadow: 0 0 -10px #92d453a6; }
-  }
 
 @keyframes fadeout {
     0% { opacity: 1; }

@@ -1,4 +1,5 @@
-//Start the game and hide the menu
+//Start the game and hide the menu.
+//Do not check for game over or if there's a cat in the same area to prevent events upon starting the game.
 function startGame()    {
     createMap();
     startingPosition();
@@ -13,7 +14,7 @@ function startGame()    {
 
 }
 
-//Reset zombie-position, player-position, cat-position, steps counter, map locations and restart the game
+//Reset zombie-position, player-position, cat-position, steps counter, map locations and restart the game.
 function restart()  {
     document.getElementById("up").style.visibility = 'visible';
     document.getElementById("down").style.visibility = 'visible';
@@ -36,7 +37,7 @@ function restart()  {
 }
 
 
-//Check if the zombie found you - if not move to the next area
+//Check if the zombie found you - if not move to the next area.
 function checkGameOver(playerMoves) {
 
     var direction = playerMoves;
@@ -72,7 +73,7 @@ function checkGameOver(playerMoves) {
 
 }
 
-//End the game if the player and zombie moves to the same spot
+//End the game if the player and zombie moves to the same spot.
 function checkTooBad() {
 
     if (xPosition === xZombiePos && yPosition === yZombiePos)  {
@@ -80,20 +81,20 @@ function checkTooBad() {
     }
 }
 
-//Zombie found the player and the game ends
+//Zombie found the player and the game ends.
 function gameOver() {
     //Count the step and transfer player to the next area.
     countSteps();
     nextArea();
     zombieClose();
     drawMap()
-    //Hide controls and show the restart option
+    //Hide controls and show the restart option.
     document.getElementById("up").style.visibility = 'hidden';
     document.getElementById("down").style.visibility = 'hidden';
     document.getElementById("left").style.visibility = 'hidden';
     document.getElementById("right").style.visibility = 'hidden';
     document.getElementById("tryAgain").style.visibility = 'visible';
-    //Show Zombie on screen with a message
+    //Show Zombie on screen with a message.
     document.getElementById("zombie").style.visibility = 'visible';
     document.getElementById("event").style.visibility = 'visible';
     document.getElementById("message").style.visibility = 'visible';
@@ -105,15 +106,15 @@ function gameOver() {
     document.getElementById("message").style.fontFamily = 'Yeon Sung, cursive';
 }
 
-//Check if you found the cat
+//Check if the player found the cat.
 function checkCatFound() {
 
-    //If the player and the Zombie lands on the cats position the player still loses
+    //If the player and the Zombie lands on the cats position the player still loses.
     if (xPosition === xCatPos && yPosition === yCatPos && xPosition === xZombiePos && yPosition === yZombiePos)  {
         gameOver();
     }
 
-    //The player found a cat
+    //The player found a cat.
     else if (xPosition === xCatPos && yPosition === yCatPos)  {
         catFound();
     }
@@ -121,13 +122,13 @@ function checkCatFound() {
 
 //You found a cat
 function catFound() {
-    //Hide controls and show the rescue option
+    //Hide controls and show the rescue option.
     document.getElementById("up").style.visibility = 'hidden';
     document.getElementById("down").style.visibility = 'hidden';
     document.getElementById("left").style.visibility = 'hidden';
     document.getElementById("right").style.visibility = 'hidden';
     document.getElementById("rescueCat").style.visibility = 'visible';
-    //Show the cat on screen with a message
+    //Show the cat on screen with a message.
     document.getElementById("cat").style.visibility = 'visible';
     document.getElementById("event").style.visibility = 'visible'; 
     document.getElementById("message").style.visibility = 'visible';
@@ -140,7 +141,7 @@ function catFound() {
     document.getElementById("message").innerHTML = "<p>You found a cat homie!</p>";
 }
 
-//The cat was found and the player continues from the area where he/she found it
+//The cat was found and the player continues from the area where he/she found it.
 function rescue()   {
     cats += 1;
     document.getElementById("catsFound").innerHTML = "Cats found: " + cats;
@@ -154,7 +155,7 @@ function rescue()   {
     document.getElementById("event").style.visibility = 'hidden';
     document.getElementById("message").style.visibility = 'hidden';
 
-    //Hide the movement button if the player starts at the edge of the map
+    //Hide the movement button if the player starts at the edge of the map.
     if  (yPosition == 0 && xPosition == 0)    {
         document.getElementById("up").style.visibility = 'hidden';
         document.getElementById("left").style.visibility = 'hidden';

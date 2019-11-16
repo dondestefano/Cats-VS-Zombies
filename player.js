@@ -1,10 +1,10 @@
-//Global Player-position and steps
+//Global Player-position, steps and found cats
 var yPosition = 0;
 var xPosition = 0;
 var steps = 0;
 var cats = 0;
 
-//Starting position
+//Randomly place the player on the map
 function startingPosition() {
 
     yPosition = Math.floor(Math.random() * 7);
