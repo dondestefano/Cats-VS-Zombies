@@ -16,7 +16,7 @@
   <author href="https://build.phonegap.com" email="support@phonegap.com">
       Michael De Stefano
   </author>
-<icon src="images\assets\icon.png"/>
+<icon src="images/assets/icon.png"/>
 
 <allow-intent href="http://*/*" />
 <allow-intent href="https://*/*" />
